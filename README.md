@@ -15,7 +15,7 @@ Di akhir, setiap branch akan diintegrasikan dengan branch master melalui Pull Re
 ## Set Up Project
 To set up your project (If you're using `git`): <br>
 Find the right path on your folder and open your cmd: 
-1. `git clone https://github.com/liondy/Akreditasi2020.git` <br>
+1. `git clone https://github.com/Manpro-B1/Akreditasi2020.git` <br>
 2. `git checkout <branch_name>` <br>
 `branch_name`: nama masing-masing modul <br>
 
