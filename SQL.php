@@ -16,10 +16,10 @@ class SQL{
 			"Database" => $this->dbname
 		);
 	}
-​
+  
 	function openConnection(){
 		$this->db_connection = sqlsrv_connect($this->servername, $this->db_connection_info);
-​
+  
 		if ($this->db_connection) {
 			echo "Connection established.<br />";
 		} else {
@@ -27,30 +27,29 @@ class SQL{
 			die(print_r(sqlsrv_errors(), true));
 		}
 	}
-    
-    function executeStoredProcedure($query, $param){
-		$this->sqlObject->openConnection();
-​
+
+	function executeStoredProcedure($query, $param){
+		$this->openConnection();
+	​
 		$nocount = sqlsrv_query($this->db_connection, "SET NOCOUNT ON");
-​
+	​
 		$statement = sqlsrv_prepare($this->db_connection, $query, $param);
 		$query_result = sqlsrv_execute($statement);
-​
-		$result = [];
-		if (sqlsrv_fetch($statement) === false) {
-			if (($errors = sqlsrv_errors()) != null) {
-				foreach ($errors as $error) {
-					echo "SQLSTATE: " . $error['SQLSTATE'] . "<br />";
-					echo "code: " . $error['code'] . "<br />";
-					echo "message: " . $error['message'] . "<br />";
+	​
+		while ($row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_NUMERIC)) {
+			if ( $row === false) {
+				if (($errors = sqlsrv_errors()) != null) {
+					foreach ($errors as $error) {
+						echo "SQLSTATE: " . $error['SQLSTATE'] . "<br />";
+						echo "code: " . $error['code'] . "<br />";
+						echo "message: " . $error['message'] . "<br />";
+					}
 				}
-			}
-		}
-​
-		while ($row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_ASSOC)) {
+			} 
 			$result[] = $row;
 		}
-​
+	​
+
 		sqlsrv_close($this->db_connection);
 		return $result;
 	}
