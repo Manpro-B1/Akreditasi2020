@@ -16,10 +16,10 @@ class SQL{
 			"Database" => $this->dbname
 		);
 	}
-	
+  
 	function openConnection(){
 		$this->db_connection = sqlsrv_connect($this->servername, $this->db_connection_info);
-	​
+  
 		if ($this->db_connection) {
 			echo "Connection established.<br />";
 		} else {
@@ -49,6 +49,7 @@ class SQL{
 			$result[] = $row;
 		}
 	​
+
 		sqlsrv_close($this->db_connection);
 		return $result;
 	}
