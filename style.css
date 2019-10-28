@@ -1,0 +1,341 @@
+.judul-block {
+    height: 25%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    padding: 15px;
+    height: auto;
+    border-bottom: solid 2px;
+}
+
+body {
+    background-image: linear-gradient(145deg, #0984e3,#74b9ff);
+}
+
+/*Style Navbar*/
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: transparent;
+    border-bottom: solid 2px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    font-size: 30px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+/*End of Style Bar*/
+
+/*Style Tabel*/
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+    text-align: center;
+}
+
+th,td {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+td:hover {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.4);
+    color: #fff;
+}
+
+/* End Of Style Table */
+
+.misi {
+    position: relative;
+    margin: auto;
+    border-bottom: blue;
+}
+
+.visi {
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+    padding: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+}
+.judul-block-konten {
+    height: 15%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+
+}
+
+.judul {
+    font-size: 30px;
+}
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+
+#logo-unpar {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.gambar-konten {
+    max-width: 110px;
+    max-height: 110px;
+    padding: 5px;
+    margin: 10px;
+}
+
+#logo-if {
+    height: 70px;
+    width: 220px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container-menu {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+}
+
+.flex-konten-menu {
+    width: 10%;
+}
+
+.flex-konten-main {
+    width: 90%;
+}
+
+.flex-konten {
+    background-color: transparent;
+    width: 25%;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    min-width: 110px;
+    min-height: 30px;
+    transition: transform .3s;
+    border: solid black 1px;
+}
+
+.flex-konten:hover {
+    transform: scale(1.2);
+}
+
+.visimisi {
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+    line-height: 0em;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.visimisi > div {
+    width: 50%;
+    margin: 10px;
+    padding: 5px;
+}
+
+.head {
+    font-size: 20px;
+}
+
+.konten {
+    padding: 5px;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a:hover {
+    background-color: rgba(231, 231, 231, 0.3);
+}
+
+.link {
+    width: 25%;
+    background-color: transparent;
+    margin: 10px;
+    padding: 5px;
+    display: block;
+}
+
+
+
+/*SIDEBAR*/
+
+.judul-kontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.judul-kontainer > div {
+    width: 33.3%;
+    min-width: 200px;
+    min-height: 50px;
+}
+
+.unpar-side {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+
+.if-side {
+    width: 210px;
+    height: 70px;
+    padding: 10px;
+}
+
+.link-konten-slide {
+    background-color: transparent;
+    text-align: center;
+    width: 90px;
+    transition: transform .3s;
+    border-right: solid black 1px;
+}
+
+
+.bar-container-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.bar-flex-side {
+    width: 50px;
+    padding: 10px;
+    text-align: center;
+    transition: transform .2s;
+}
+
+.bar-flex-side:hover {
+    transform: scale(1.1);
+}
+
+#button-menu {
+    border-bottom: solid black 1px;
+    width: 50px;
+    height: 50px;
+}
+
+.gambar-konten-side {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    margin-left: 6px;
+}
+
+.closebtn {
+    margin: 12px;
+}
+
+.closebtn:hover{
+    margin: 10px;
+    background-color: transparent;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    background-image: linear-gradient(145deg, #0984e3,#74b9ff);
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+
+#main {
+    transition: margin-left .5s;
+}
+    
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a{
+        font-size: 18px;
+    }
+}
+/*END OF SIDEBAR*/
