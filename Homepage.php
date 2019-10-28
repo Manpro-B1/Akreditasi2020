@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="flex-container">
-    <a class="flex-konten" target="_blank" style="display: block" href="http://localhost/akreditasi_2020/TataPamong.php">
+    <a class="flex-konten" target="_blank" style="display: block" href="TataPamong.php">
         <div>
             <img class="gambar-konten" src="img/kerjasama.png">
             <div class="konten">
@@ -45,7 +45,7 @@
             </div>
         </div>
     </a>
-    <a class="flex-konten" id="mahasiswa" href="http://localhost/akreditasi_2020/Mahasiswa.php">
+    <a class="flex-konten" id="mahasiswa" href="Mahasiswa.php">
         <div>
             <img class="gambar-konten" src="img/mahasiswa.png">
             <div class="konten">
@@ -53,7 +53,7 @@
             </div>
         </div>
     </a>
-    <a class="flex-konten" target="_blank" style="display: block" href="http://localhost/akreditasi_2020/SDM.php">
+    <a class="flex-konten" target="_blank" style="display: block" href="SDM.php">
         <div id="sdm">
         <img class="gambar-konten" src="img/sdm.png">
             <div class="konten">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </a>
-    <a class="flex-konten" target="_blank" style="display: block" href="http://localhost/akreditasi_2020/Keuangan.php">
+    <a class="flex-konten" target="_blank" style="display: block" href="Keuangan.php">
         <div id="keuangan">
         <img class="gambar-konten" src="img/keuangan.png">
             <div class="konten">
@@ -71,7 +71,7 @@
     </a>
     </div>
     <div class="flex-container">
-    <a class="flex-konten" target="_blank" style="display: block" href="http://localhost/akreditasi_2020/Pendidikan.php">
+    <a class="flex-konten" target="_blank" style="display: block" href="Pendidikan.php">
         <div id="pendidikan">
             <img class="gambar-konten" src="img/akademik.png">
             <div class="konten">
@@ -79,7 +79,7 @@
             </div>
         </div>
     </a>
-    <a class="flex-konten" target="_blank" style="display: block" href="http://localhost/akreditasi_2020/Penelitian.php">
+    <a class="flex-konten" target="_blank" style="display: block" href="Penelitian.php">
         <div id="penelitian">
             <img class="gambar-konten" src="img/penelitian.png">
             <div class="konten">
@@ -87,7 +87,7 @@
             </div>
         </div>
     </a>
-    <a class="flex-konten" target="_blank" style="display: block" href="http://localhost/akreditasi_2020/Pengabdian.php">
+    <a class="flex-konten" target="_blank" style="display: block" href="Pengabdian.php">
         <div id="pengabdian">
         <img class="gambar-konten" src="img/pengmas.png">
             <div class="konten">
@@ -95,7 +95,7 @@
             </div>
         </div>
     </a>
-    <a class="flex-konten" target="_blank" style="display: block" href="http://localhost/akreditasi_2020/Luaran.php">
+    <a class="flex-konten" target="_blank" style="display: block" href="Luaran.php">
         <div id="luaran">
         <img class="gambar-konten" src="img/pencapaian.png">
             <div class="konten">

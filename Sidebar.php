@@ -9,44 +9,44 @@
                 </div>
                 <div id="mySidebar" class="sidebar">
                         <a href="javascript:void(0)" 
-                        class="closebtn" onclick="closeNav()">x</a>
+                        class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="bar-container-side">
-                    <a class="link-konten-slide" href="http://localhost/akreditasi_2020/TataPamong.php">
+                    <a class="link-konten-slide" href="TataPamong.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/kerjasama.png">
                         </div>
                     </a>
-                    <a class="link-konten-slide" href="http://localhost/akreditasi_2020/Mahasiswa.php">
+                    <a class="link-konten-slide" href="Mahasiswa.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/mahasiswa.png">
                         </div>
                     </a>
-                    <a class="link-konten-slide" href="http://localhost/akreditasi_2020/SDM.php">
+                    <a class="link-konten-slide" href="SDM.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/sdm.png">
                         </div>
                     </a>
-                    <a class="link-konten-slide" href="http://localhost/akreditasi_2020/Keuangan.php">
+                    <a class="link-konten-slide" href="Keuangan.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/keuangan.png">
                         </div>
                     </a>        
-                    <a class="link-konten-slide" href="http://localhost/akreditasi_2020/Pendidikan.php">
+                    <a class="link-konten-slide" href="Pendidikan.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/akademik.png">
                         </div>
                     </a>
-                    <a class="link-konten-slide" href="http://localhost/akreditasi_2020/Penelitian.php">
+                    <a class="link-konten-slide" href="Penelitian.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/penelitian.png">
                         </div>
                     </a>
-                    <a class="link-konten-slide" href="http://localhost/akreditasi_2020/Pengabdian.php">
+                    <a class="link-konten-slide" href="Pengabdian.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/pengmas.png">
                         </div>
                     </a>
-                    <a class="link-konten-slide" href="http://localhost/akreditasi_2020/Capaian.php">
+                    <a class="link-konten-slide" href="Capaian.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/pencapaian.png">
                         </div>
