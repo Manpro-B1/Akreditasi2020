@@ -51,7 +51,7 @@ class SQL
 		$statement = sqlsrv_prepare($this->db_connection, $query, $param);
 		$query_result = sqlsrv_execute($statement);
 		$result = [];
-		while ($row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_BOTH)) {
+		while ($row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_ASSOC)) {
 			if ($row === false) {
 				if (($errors = sqlsrv_errors()) != null) {
 					foreach ($errors as $error) {
@@ -78,7 +78,7 @@ class SQL
 		$this->openConnection();
 		$statement = sqlsrv_prepare($this->db_connection, $query, $param);
 		$query_result = sqlsrv_execute($statement);
-		while ($row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_NUMERIC)) {
+		while ($row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_ASSOC)) {
 			if ($row === false) {
 				if (($errors = sqlsrv_errors()) != null) {
 					foreach ($errors as $error) {
