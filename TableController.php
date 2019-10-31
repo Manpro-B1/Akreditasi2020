@@ -222,7 +222,8 @@ class TableController
     }
 
     /**
-     * 
+     * Fungsi untuk mengambil data jumlah publikasi ilmiah mahasiswa, yang dihasilkan secara mandiri atau
+     * bersama DTPS, dalam 3 tahun terakhir (part jurnal)
      */
     function getTabel8f1_partJurnalMahasiswa()
     {
@@ -231,8 +232,9 @@ class TableController
         return $result;
     }
 
-    /**
-     * 
+   /**
+     * Fungsi untuk mengambil data jumlah publikasi ilmiah mahasiswa, yang dihasilkan secara mandiri atau
+     * bersama DTPS, dalam 3 tahun terakhir (part seminar)
      */
     function getTabel8f1_PartSeminarMahasiswa()
     {
@@ -242,7 +244,8 @@ class TableController
     }
 
     /**
-     * 
+     * Fungsi untuk mengambil data luaran penelitian dan luaran PkM yang dihasilkan mahasiswa, baik secara
+     * mandiri atau bersama DTPS, dalam 3 tahun terakhir
      */
     function getTabel8f3_LuaranPenelitianPKMLainnyaMahasiswa()
     {
@@ -251,6 +254,9 @@ class TableController
         return $result;
     }
 
+    /**
+     * 
+     */
     function getRekapIntegrasiMataKuliah()
     {
         $query = "EXEC [RekapIntegrasiMataKuliah];";
@@ -308,7 +314,7 @@ class TableController
     }
 
     /**
-     * 
+     * Fungsi untuk mengambil jumlah lulusan, rata-rata IPK lulusan, IPK minimal, dan IPK maksimum pada TS, TS-1, dan TS-2
      */
     function getLulusanByTS()
     {
@@ -364,6 +370,9 @@ class TableController
         return $result;
     }
 
+    /**
+     * Fungsi untuk mengambildata lulusan pada TS, TS-1, dan TS-2
+     */
     function getFullDataLulusanByTS()
     {
         $queryTS = "SELECT * FROM Kelulusan_TD WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate()),'-08-01')) 
