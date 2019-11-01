@@ -1,6 +1,9 @@
 <?php
-    	include "SQL.php";
-        include "TableController.php";
+    include "SQL.php";
+    include "TableController.php";
+
+    $sql = new SQL();
+    $tController = new TableController($sql);
 ?>
 
 <head>
@@ -101,8 +104,42 @@
                 <tbody>
                     <!-- php -->
                     <?php 
-                        $sql = new SQL();
-                        $tController = new TableController($sql);
+                        $res = $tController->getTabel3a1_DosenTetapUPPS();
+                        $i = 1;
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['NamaDosen'].'</td>';
+                            echo '<td>'.$value['NIDN'].'</td>';
+                            echo '<td>'.$value['Pendidikan'].'</td>';
+
+                            if ($value['Pendidikan_doctor'] != NULL) {
+                                echo '<td>'.$value['Pendidikan_doctor'].'</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+
+                            echo '<td>'.$value['BidangKeahlian'].'</td>';
+                            echo '<td>'.$value['KesesuaianKompetensi'].'</td>';
+                            echo '<td>'.$value['JabatanAkademik'].'</td>';
+                            echo '<td>'.$value['SertifikatPendidik'].'</td>';
+                            
+                            if ($value['SertifikatKompetensi'] != NULL) {
+                                echo '<td>'.$value['SertifikatKompetensi'].'</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+
+                            echo '<td>'.$value['MataKuliahPSYangDiampu'].'</td>';
+                            echo '<td>'.$value['KesesuaianBidangKeahlian'].'</td>';
+                            
+                            if ($value['MataKuliahLuarPSYangDiampu'] != NULL) {
+                                echo '<td>'.$value['MataKuliahLuarPSYangDiampu'].'</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+                        } 
                     ?>
                 </tbody>
             </table>
@@ -161,11 +198,23 @@
                 </thead>
                 <tbody>
                     <?php
-                        $sql = new SQL();
-                        $tController = new TableController($sql);
-                        $res = $tController->getTabel3a1_DosenTetapUPPS();
+                        $res = $tController->getTabel3a2_DosenPembimbingUtamaTugasAkhir();
 
-                        print_r($res);
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$value['Nomor'].'</td>';
+                            echo '<td>'.$value['NamaDosen'].'</td>';
+                            echo '<td>'.$value['TS-2'].'</td>';
+                            echo '<td>'.$value['TS-1'].'</td>';
+                            echo '<td>'.$value['TS'].'</td>';
+                            echo '<td>'.number_format($value['Rata2'], 2).'</td>';
+                            echo '<td>'.$value['TS-2b'].'</td>';
+                            echo '<td>'.$value['TS-1b'].'</td>';
+                            echo '<td>'.$value['TSb'].'</td>';
+                            echo '<td>'.number_format($value['Rata2b'], 2).'</td>';
+                            echo '<td>'.number_format($value['Rata2_semua'], 2).'</td>';
+                            echo '</tr>';
+                        }
                     ?>
                 </tbody>
             </table>
@@ -176,6 +225,9 @@
                     <tr>
                         <th rowspan="3">
                             No
+                        </th>
+                        <th rowspan="3">
+                            NIK
                         </th>
                         <th rowspan="3">
                             Nama Dosen (DT)
@@ -219,6 +271,34 @@
                         </th>
                     </tr>
                 </thead>
+                <tbody>
+                    <?php
+                        $res = $tController->getTabel3a3_EWMPDosenTetapPerguruanTinggi();
+                        $i = 1;
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['NIK'].'</td>';
+                            echo '<td>'.$value['Nama'].'</td>';
+                            
+                            if ($value['isDTPS'] == 1) {
+                                echo '<td>V</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+
+                            echo '<td>'.$value['PembelajaranPS'].'</td>';
+                            echo '<td>'.$value['PembelajaranPSLain'].'</td>';
+                            echo '<td>'.$value['PembelajaranPSLuar'].'</td>';
+                            echo '<td>'.$value['Penelitian'].'</td>';
+                            echo '<td>'.$value['Pkm'].'</td>';
+                            echo '<td>'.$value['Tambahan'].'</td>';
+                            echo '<td>'.$value['Jumlah'].'</td>';
+                            echo '<td>'.$value['Rata2'].'</td>';
+                            echo '</tr>';
+                        }
+                    ?>
+                </tbody>
             </table>
         </div>
         <div class="konten" id="konten-4">
@@ -257,6 +337,53 @@
                         </th>
                     </tr>
                 </thead>
+                <tbody>
+                    <?php
+                        $res = $tController->getTabel3a4_DosenTidakTetapUPPS();
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$value['Nomor'].'</td>';
+                            echo '<td>'.$value['NamaDosen'].'</td>';
+                            
+                            if ($value['NIDN'] != NULL) {
+                                echo '<td>'.$value['NIDN'].'</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+
+                            echo '<td>'.$value['Pendidikan'].'</td>';
+                            echo '<td>'.$value['BidangKeahlian'].'</td>';
+                            
+                            if ($value['JabatanAkademik'] != NULL) {
+                                echo '<td>'.$value['JabatanAkademik'].'</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+
+                            if ($value['SertifikatPendidik'] != NULL) {
+                                echo '<td>'.$value['SertifikatPendidik'].'</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+
+                            if ($value['SertifikatKompetensi'] != NULL) {
+                                echo '<td>'.$value['SertifikatKompetensi'].'</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+
+                            echo '<td>'.$value['MataKuliahPSYangDiampu'].'</td>';
+
+                            if ($value['KesesuaianBidangKeahlian'] != NULL) {
+                                echo '<td>V</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+                            echo '</tr>';
+                        }
+                    ?>
+                </tbody>
             </table>
         </div>
         <div class="konten" id="konten-5">
@@ -292,6 +419,24 @@
                         </th>
                     </tr>
                 </thead>
+                <tbody>
+                    <?php
+                    /*
+                        $res = $tController->getTabel3a5_DosenPraktisi();
+                        $i = 1;
+
+                        // Glitched
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['NamaDosen'].'</td>';
+                            echo '<td>'.$value['NIDK'].'</td>';
+                            echo '</tr>';
+                        }
+                        */
+                    ?>
+                </tbody>
             </table>
         </div>
         <div class="konten" id="konten-6">
@@ -330,7 +475,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                
+                    <?php
+                        $res = $tController->getTabel3b1_RekognisiDTPS();
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$value['Nomor'].'</td>';
+                            echo '<td>'.$value['NamaDosen'].'</td>';
+                            echo '<td>'.$value['Bidang Keahlian'].'</td>';
+                            echo '<td>'.$value['Rekognisi'].'</td>';
+                            echo '<td>'.$value['Wilayah'].'</td>';
+                            echo '<td>'.$value['Nasional'].'</td>';
+                            echo '<td>'.$value['Internasional'].'</td>';
+                            echo '<td>'.$value['Tahun'].'</td>';
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -363,6 +522,22 @@
                         </th>
                     </tr>
                 </thead>
+                <tbody>
+                    <?php
+                        $res = $tController->getTabel3b2_PenelitianDTPS();
+                        $i = 1;
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['sumberPembiayaan'].'</td>';
+                            echo '<td>'.$value['ts2'].'</td>';
+                            echo '<td>'.$value['ts1'].'</td>';
+                            echo '<td>'.$value['ts'].'</td>';
+                            echo '<td>'.$value['jumlah'].'</td>';
+                        }
+                    ?>
+                </tbody>
             </table>
         </div>
         <div class="konten" id="konten-8">
@@ -394,6 +569,15 @@
                         </th>
                     </tr>
                 </thead>
+                <tbody>
+                    <?php
+                        $res = $tController->getTabel3b3_PKMDTPS();
+
+                        foreach ($res as $tt=>$value) {
+                            
+                        }
+                    ?>
+                </tbody>
             </table>
         </div>
         <div class="konten" id="konten-9">
