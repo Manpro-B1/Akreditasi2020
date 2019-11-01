@@ -45,7 +45,7 @@
                     <li><a href="#konten-9" onclick="show('konten-9')">Publikasi Ilmiah DTPS</a></li>
                     <li><a href="#konten-10" onclick="show('konten-10')">Pagelaran / Pameran / Presentasi / Publikasi Ilmiah DTPS</a></li>
                     <li><a href="#konten-11" onclick="show('konten-11')">Karya Ilmiah DTPS yang disitasi dalam 3 tahun terakhir</a></li>
-                    <li><a href="#konten-12" onclick="show('konten-12')">Produk / jasa DTPS yang diadopse oleh industri / masyarakat</a></li>
+                    <li><a href="#konten-12" onclick="show('konten-12')">Produk / jasa DTPS yang diadopsi oleh industri / masyarakat</a></li>
                     <li><a href="#konten-13" onclick="show('konten-13')">Luaran Penelitian / PkM Lainnya oleh DTPS</a></li>
                 </div>
             </ul>
@@ -572,9 +572,16 @@
                 <tbody>
                     <?php
                         $res = $tController->getTabel3b3_PKMDTPS();
+                        $i = 1;
 
                         foreach ($res as $tt=>$value) {
-                            
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['sumberPembiayaan'].'</td>';
+                            echo '<td>'.$value['ts2'].'</td>';
+                            echo '<td>'.$value['ts1'].'</td>';
+                            echo '<td>'.$value['ts'].'</td>';
+                            echo '<td>'.$value['jumlah'].'</td>';
                         }
                     ?>
                 </tbody>
@@ -610,6 +617,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        $res = $tController->getTabel3b4_PartJurnal();
+                        $i = 1;
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['jenisPublikasi'].'</td>';
+                            echo '<td>'.$value['ts2'].'</td>';
+                            echo '<td>'.$value['ts1'].'</td>';
+                            echo '<td>'.$value['ts'].'</td>';
+                            echo '<td>'.$value['jumlah'].'</td>';
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -643,7 +664,70 @@
                     </tr>
                 </thead>
                 <tbody>
-                
+                    <?php
+                        $res = $tController->getTabel3b4_PartSeminar();
+
+                        $i = 1;
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['jenisPublikasi'].'</td>';
+                            echo '<td>'.$value['ts2'].'</td>';
+                            echo '<td>'.$value['ts1'].'</td>';
+                            echo '<td>'.$value['ts'].'</td>';
+                            echo '<td>'.$value['jumlah'].'</td>';
+                            echo '</tr>';
+                        }
+                    ?>
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">
+                            No
+                        </th>
+                        <th rowspan="2"> 
+                            Jenis
+                        </th>
+                        <th colspan="3">
+                            Jumlah Judul
+                        </th>
+                        <th rowspan="2">
+                            Jumlah
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            TS-2
+                        </th>   
+                        <th>
+                            TS-1
+                        </th>   
+                        <th>
+                            TS
+                        </th>              
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $i = 1;
+
+                        $res = $tController->getTabel3b4_PartTulisan();
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['jenisPublikasi'].'</td>';
+                            echo '<td>'.$value['ts2'].'</td>';
+                            echo '<td>'.$value['ts1'].'</td>';
+                            echo '<td>'.$value['ts'].'</td>';
+                            echo '<td>'.$value['jumlah'].'</td>';
+                            echo '</tr>';
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -666,7 +750,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                
+                    <?php
+                        $res = $tController->getTabel3b5_KaryaIlmiahDisitasi();
+                        $i = 1;
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$i++.'</td>';
+                            echo '<td>'.$value['NamaDosen'].'</td>';
+                            echo '<td>'.$value['JudulArtikel'].'</td>';
+                            echo '<td>'.$value['JumlahSitasi'].'</td>';
+                            echo '</tr>';
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -714,10 +810,33 @@
                         </th>
                     </tr>
                 </thead>
+                <tbody>
+                    <?php
+                        $res = $tController->getTabel3b7_LuaranPenelitianPKMLainnya();
+
+                        foreach ($res as $tt=>$value) {
+                            echo '<tr>';
+                            echo '<td>'.$value['Nomor'].'</td>';
+                            echo '<td>'.$value['JudulLuaran'].'</td>';
+                            
+                            if ($value['tahun'] != NULL) {
+                                echo '<td>'.$value['tahun'].'</td>';
+                            }
+
+                            if ($value['keterangan'] != NULL) {
+                                echo '<td>'.$value['keterangan'].'</td>';
+                            } else {
+                                echo '<td></td>';
+                            }
+                            echo '</tr>';
+                        }
+                    ?>
+                </tbody>
             </table>
         </div>
         <script>
             close();
+            show('konten-1');
             function close() {
                 var x = document.getElementsByClassName("konten");
                 for (var i = 0; i < x.length; i++) {
