@@ -1,3 +1,8 @@
+<?php
+    	include "SQL.php";
+        include "TableController.php";
+?>
+
 <head>
         <title>Sumber Daya Manusia</title>
         <meta charset="UTF-8">
@@ -47,54 +52,58 @@
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="2">
+                        <th rowspan="2">
                             No
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Nama Dosen
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             NIDM / NIDK
-                        </td>
-                        <td colspan="2">
+                        </th>
+                        <th colspan="2">
                             Pendidikan Pasca Sarjana
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Bidang Keahlian
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Kesesuaian dengan Kompetensi Inti PS
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Jabatan Akademik
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Sertifikat Pendidik Profesional
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Sertifikat Kompetensi / Profesi / Industri
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Mata Kuliah yang Diampu pada PS yang Diakreditasi
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Kesesuaian Bidang Keahlian dengan Mata Kuliah yang Diampu
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Mata Kuliah yang Diampu pada PS Lain
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             Magister / Magister Terapan / Spesialis
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Doktor / Doktor Terapan / Spesialis
-                        </td>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- php -->
+                    <?php 
+                        $sql = new SQL();
+                        $tController = new TableController($sql);
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -102,55 +111,62 @@
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="3">
+                        <th rowspan="3">
                             No
-                        </td>
-                        <td rowspan="3">
+                        </th>
+                        <th rowspan="3">
                             Nama Dosen
-                        </td>
-                        <td colspan="8">
+                        </th>
+                        <th colspan="8">
                             Jumlah Mahasiswa yang Dibimbing
-                        </td>
-                        <td rowspan="3">
+                        </th>
+                        <th rowspan="3">
                             Rata-Rata Jumlah Bimbingan di Semua Program / Semester
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td colspan="4">
+                        <th colspan="4">
                             Pada PS yang Diakreditasi
-                        </td>
-                        <td colspan="4">
+                        </th>
+                        <th colspan="4">
                             Pada PS lain di PT
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             TS-2
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS-1
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Rata-Rata
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS-2
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS-1
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Rata-Rata
-                        </td>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        $sql = new SQL();
+                        $tController = new TableController($sql);
+                        $res = $tController->getTabel3a1_DosenTetapUPPS();
+
+                        print_r($res);
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -158,49 +174,49 @@
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="3">
+                        <th rowspan="3">
                             No
-                        </td>
-                        <td rowspan="3">
+                        </th>
+                        <th rowspan="3">
                             Nama Dosen (DT)
-                        </td>
-                        <td rowspan="3">
+                        </th>
+                        <th rowspan="3">
                             DTPS
-                        </td>
-                        <td colspan="6">
+                        </th>
+                        <th colspan="6">
                             Ekuivalen Waktu Mengajar Penuh (EWMP) pada saat TS dalam satuan kredit semester (SKS)
-                        </td>
-                        <td rowspan="3">
+                        </th>
+                        <th rowspan="3">
                             Jumlah (SKS)
-                        </td>
-                        <td rowspan="3">
+                        </th>
+                        <th rowspan="3">
                             Rata-rata per Semester (SKS)
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td colspan="3">
+                        <th colspan="3">
                             Pendidikan: Pembelajaran dan Pembimbingan
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Penelitian
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             PkM
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Tugas Tambahan dan / atau Penunjang
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             PS yang Diakreditasi
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             PS Lain di dalam PT
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             PS Lain di luar PT
-                        </td>
+                        </th>
                     </tr>
                 </thead>
             </table>
@@ -209,36 +225,36 @@
             <table>
                 <thead>
                     <tr>
-                        <td>
+                        <th>
                             No
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Nama Dosen
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             NIDN / NIDK
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Pendidikan Pasca Sarjana
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Bidang Keahlian
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Jabatan Akademik
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Sertifikat Pendidik Profesional
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Sertifikat Profesi / Kompetensi / Industri
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Mata Kuliah yang Diampu pada PS yang Diakreditasi
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Kesesuaian Bidang Keahlian dengan Mata Kuliah yang Diampu
-                        </td>
+                        </th>
                     </tr>
                 </thead>
             </table>
@@ -247,33 +263,33 @@
             <table>
                 <thead>
                     <tr>
-                        <td>
+                        <th>
                             No
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Nama Dosen Industri / Praktisi
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             NIDK
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Perusahaan / Industri
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Pendidikan Tertinggi
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Bidang Keahlian
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Sertifikat Profesi / Kompetensi / Industri
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Mata Kuliah yang Diampu
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Bobot Kredit (SKS)
-                        </td>
+                        </th>
                     </tr>
                 </thead>
             </table>
@@ -282,35 +298,35 @@
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="2">
+                        <th rowspan="2">
                             No
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Nama Dosen
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Bidang Keahlian
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Rekognisi dan Bukti Pendukung
-                        </td>
-                        <td colspan="3">
+                        </th>
+                        <th colspan="3">
                             Tingkat
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Tahun
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             Wilayah
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Nasional
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             Internasional
-                        </td>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -322,29 +338,29 @@
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="2">
+                        <th rowspan="2">
                             No
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Sumber Pembiayaan
-                        </td>
-                        <td colspan="3">
+                        </th>
+                        <th colspan="3">
                             Jumlah Judul
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Jumlah
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             TS-2
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS-1
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS
-                        </td>
+                        </th>
                     </tr>
                 </thead>
             </table>
@@ -353,29 +369,29 @@
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="2">
+                        <th rowspan="2">
                             No
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Sumber Pembiayaan
-                        </td>
-                        <td colspan="3">
+                        </th>
+                        <th colspan="3">
                             Jumlah Judul
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Jumlah
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             TS-2
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS-1
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS
-                        </td>
+                        </th>
                     </tr>
                 </thead>
             </table>
@@ -384,29 +400,29 @@
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="2">
+                        <th rowspan="2">
                             No
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Media Publikasi
-                        </td>
-                        <td colspan="3">
+                        </th>
+                        <th colspan="3">
                             Jumlah Judul
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Jumlah
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             TS-2
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS-1
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             TS
-                        </td>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -417,30 +433,30 @@
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="2">
+                        <th rowspan="2">
                             No
-                        </td>
-                        <td rowspan="2"> 
+                        </th>
+                        <th rowspan="2"> 
                             Jenis
-                        </td>
-                        <td colspan="3">
+                        </th>
+                        <th colspan="3">
                             Jumlah Judul
-                        </td>
-                        <td rowspan="2">
+                        </th>
+                        <th rowspan="2">
                             Jumlah
-                        </td>
+                        </th>
                     </tr>
-                    <td>
-                        <td>
+                    <tr>
+                        <th>
                             TS-2
-                        </td>   
-                        <td>
+                        </th>   
+                        <th>
                             TS-1
-                        </td>   
-                        <td>
+                        </th>   
+                        <th>
                             TS
-                        </td>              
-                    </td>
+                        </th>              
+                    </tr>
                 </thead>
                 <tbody>
                 
