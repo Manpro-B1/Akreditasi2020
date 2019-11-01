@@ -1,10 +1,11 @@
 <?php
+
 /**
  * Kelas untuk membuka koneksi ke Server dan mengakses database
  */
 class SQL
 {
-	public $db_connection;			
+	public $db_connection;
 	function __construct()
 	{
 		$this->servername = "10.100.70.70\\AKREDITASI2020";
@@ -33,7 +34,7 @@ class SQL
 		} else {
 			// echo "Connection could not be established.<br />";
 			// die(print_r(sqlsrv_errors(), true));
-			return [$success, "message"=>sqlsrv_errors()];
+			return [$success, "message" => sqlsrv_errors()];
 		}
 	}
 
@@ -51,8 +52,15 @@ class SQL
 		$statement = sqlsrv_prepare($this->db_connection, $query, $param);
 		$query_result = sqlsrv_execute($statement);
 		$result = [];
-		while ($row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_ASSOC)) {
-			if ($row === false) {
+
+		$idx = 0;
+		$nextTable = false;
+
+		$row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_ASSOC);
+
+		while ($row) {
+			//Bakal masuk ke if ini kalo hasil fetch pertama kali kosong 
+			if (!$row) {
 				if (($errors = sqlsrv_errors()) != null) {
 					foreach ($errors as $error) {
 						echo "SQLSTATE: " . $error['SQLSTATE'] . "<br />";
@@ -61,7 +69,26 @@ class SQL
 					}
 				}
 			}
-			$result[] = $row;
+
+			//If yang di atas di-skip karena $row ada isinya
+			$result[$idx][] = $row;
+
+			//Fetch row berikutnya trus dimasukkin ke $row
+			$row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_ASSOC);
+
+			//Kalo $row kosong, di-cek dulu ada table selanjutnya yang bisa diambil atau tidak.
+			if (!$row) {
+				//Ambil tabel selanjutnya
+				$nextTable = sqlsrv_next_result($statement);
+
+				if ($nextTable) {
+					//Kalo masuk ke sini brrti ada tabel slanjutnya, row selanjutnya langsung di-fetch biar tidak break dari whilenya 
+					$row = sqlsrv_fetch_array($statement, SQLSRV_FETCH_ASSOC);
+				} 
+
+				//$idx di tambahin 1, ganti nilai index untuk table selanjutnya
+				$idx+=1;
+			}
 		}
 		sqlsrv_close($this->db_connection);
 		return $result;
