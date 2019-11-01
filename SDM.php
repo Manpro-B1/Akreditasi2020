@@ -15,7 +15,7 @@
                     <img class="unpar-side" src="img/unpar.png" alt="">
                 </div>
                 <div>
-                    <h2 style="padding: 10px;">Pendidikan</h2>
+                    <h2 style="padding: 10px;">Sumber Daya Manusia</h2>
                 </div>
                 <div>
                     <img class="if-side" src="img/logoIF.jpg" alt="">
