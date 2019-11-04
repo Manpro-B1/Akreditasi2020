@@ -13,14 +13,14 @@ getTabel3a5_DosenPraktisi
 getTabel3b1_RekognisiDTPS						+		Tabel 3.b.1 Pengakuan/Rekognisi DTPS 
 getTabel3b2_PenelitianDTPS						+		Tabel 3.b.2 Penelitian DTPS
 getTabel3b3_PKMDTPS								+		Tabel 3.b.3 Pengabdian kepada Masyarakat (PkM) DTPS
-getTabel3b4_PartJurnal							+		Tabel 3.b.4) Publikasi Ilmiah DTPS
-getTabel3b4_PartSeminar							+		Tabel 3.b.4) Publikasi Ilmiah DTPS
-getTabel3b4_PartTulisan							+		Tabel 3.b.4) Publikasi Ilmiah DTPS
-getTabel3b5_KaryaIlmiahDisitasi					+		Tabel 3.b.5) Karya ilmiah DTPS yang disitasi dalam 3 tahun terakhir
+getTabel3b4_PartJurnal							+		Tabel 3.b.4 Publikasi Ilmiah DTPS
+getTabel3b4_PartSeminar							+		Tabel 3.b.4 Publikasi Ilmiah DTPS
+getTabel3b4_PartTulisan							+		Tabel 3.b.4 Publikasi Ilmiah DTPS
+getTabel3b5_KaryaIlmiahDisitasi					+		Tabel 3.b.5 Karya ilmiah DTPS yang disitasi dalam 3 tahun terakhir
 
 getTabel3b6
 
-getTabel3b7_LuaranPenelitianPKMLainnya			+		Tabel 3.b.7) Luaran Penelitian/PkM Lainnya oleh DTPS
+getTabel3b7_LuaranPenelitianPKMLainnya			+		Tabel 3.b.7 Luaran Penelitian/PkM Lainnya oleh DTPS
 getTabel4_PenggunaanDana						+		Tabel 4 Penggunaan Dana
 
 getTabel5b_IntegrasiKegiatanPenelitianPkM		+		Tabel 5.b Integrasi Kegiatan Penelitian/PkM dalam Pembelajaran
@@ -30,5 +30,9 @@ getTabel7_PKMDTPSMahasiswa						+		Tabel 7. PkM DTPS yang melibatkan mahasiswa
  
 getLulusanByTS									+		Tabel 8.a IPK Lulusan
 getTabelDataLulus								+
-getTabelPrestasiAkademik						+		Tabel 8.b.1) Prestasi Akademik
-getTabelPrestasiNonAkademik						+		Tabel 8.b.2) Prestasi Nonakademik Mahasiswa
+getTabelPrestasiAkademik						+		Tabel 8.b.1 Prestasi Akademik
+getTabelPrestasiNonAkademik						+		Tabel 8.b.2 Prestasi Nonakademik Mahasiswa
+getTabel8f1_partJurnalMahasiswa					+		Tabel 8.f.1 Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa
+getTabel8f1_PartSeminarMahasiswa				+		Tabel 8.f.1 Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa
+
+getTabel8f3_LuaranPenelitianPKMLainnyaMahasiswa	+		Tabel 8.f.4 Luaran penelitian/PkM yang dihasilkan mahasiswa
