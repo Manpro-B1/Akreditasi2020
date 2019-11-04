@@ -95,7 +95,7 @@
             </div>
         </div>
     </a>
-    <a class="flex-konten" target="_blank" style="display: block" href="Luaran.php">
+    <a class="flex-konten" target="_blank" style="display: block" href="Capaian.php">
         <div id="luaran">
         <img class="gambar-konten" src="img/pencapaian.png">
             <div class="konten">
