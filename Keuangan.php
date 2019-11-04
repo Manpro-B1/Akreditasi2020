@@ -1,7 +1,17 @@
+<?php
+    include "SQL.php";
+    include "TableController.php";
+?>
 <head>
         <title>Keuangan</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <style>
+            table, th, td {
+            border: 1px solid black;
+            font-size: 14.5px;
+            }
+        </style>
     </head>
     <body style="height: 100%">
         <div class="judul-block">
@@ -33,7 +43,63 @@
         </div>
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
         <div class="konten" id="konten-1">
-            asd
+            <h1>Penggunaan Dana</h1>
+            <table>
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Jenis Penggunaan</th>
+                    <th colspan="4">UPPS</th>
+                    <th colspan="4">Program Studi</th>
+                </tr>
+                <tr>
+                    <td>TS-2</td>
+                    <td>TS-1</td>
+                    <td>TS</td>
+                    <td>Rata-rata</td>
+                    
+                    <td>TS-2</td>
+                    <td>TS-1</td>
+                    <td>TS</td>
+                    <td>Rata-rata</td>
+                </tr>
+            <?php
+                $db = new SQL();
+                $con = new TableController($db);
+                $result = $con->getTabel4_PenggunaanDana();
+                $counter = 0;
+                for($x=0; $x<sizeof($result[0]); $x++){
+                    echo "<tr>";
+                    echo "<td>".$result[0][$x]['Nomor']."</td>";
+                    $counter = $counter+1;
+                    echo "<td>".$result[0][$x]['jenisPenggunaan']."</td>";
+                    $counter = $counter+1;
+                    if($result[0][$x]['TS_2_UPPS'] == null){
+                        echo "<td colspan='8'>".$result[0][$x]['TS_2_UPPS']."</td>";
+                        $counter = 0;
+                        echo "</tr>";
+                    }
+                    else{
+                        echo "<td>".$result[0][$x]['TS_2_UPPS']."</td>";
+                        $counter = $counter+1;
+                        echo "<td>".$result[0][$x]['TS_1_UPPS']."</td>";
+                        $counter = $counter+1;
+                        echo "<td>".$result[0][$x]['TS_UPPS']."</td>";
+                        $counter = $counter+0;
+                        echo "<td>".$result[0][$x]['Rata_rata_UPPS']."</td>";
+                        $counter = $counter+0;
+                        echo "<td>".$result[0][$x]['TS_2_PS']."</td>";
+                        $counter = $counter+0;
+                        echo "<td>".$result[0][$x]['TS_1_PS']."</td>";
+                        $counter = $counter+0;
+                        echo "<td>".$result[0][$x]['TS_PS']."</td>";
+                        $counter = $counter+0;
+                        echo "<td>".$result[0][$x]['Rata_rata_PS']."</td>";
+                        $counter = 0;
+                        echo "</tr>";
+                    }  
+                }
+            ?>
+            </table>
         </div>
         <div class="konten" id="konten-2">
             dsa
