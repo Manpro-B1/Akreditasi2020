@@ -1,0 +1,19 @@
+#tbl-konten,th,td{
+    color: #1b1b1b !important;
+	padding: 15px;
+    text-align: center;
+    border: 1px solid black !important;
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+    text-align: center;
+    border: 1px solid black;
+}
+
+.keterangan{
+    text-align: left !important;
+    height: 100px;
+}
