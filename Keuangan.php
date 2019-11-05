@@ -36,8 +36,7 @@
                 </div>  
                 <div>
                     <!--Masukan id div konten kalian sesuai dengan format dibawah-->
-                    <li><a href="#konten-1" onclick="show('konten-1')">konten 1</a></li>
-                    <li><a href="#konten-2" onclick="show('konten-2')">konten 2</a></li>
+                    <li><a href="#konten-1" onclick="show('konten-1')">Penggunaan Dana</a></li>
                 </div>
             </ul>
         </div>
@@ -100,9 +99,6 @@
                 }
             ?>
             </table>
-        </div>
-        <div class="konten" id="konten-2">
-            dsa
         </div>
         <script>
             close();

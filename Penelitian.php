@@ -36,8 +36,8 @@ include "TableController.php";
                 </div>  
                 <div>
                     <!--Masukan id div konten kalian sesuai dengan format dibawah-->
-                    <li><a href="#konten-1" onclick="show('konten-1')">konten 1</a></li>
-                    <li><a href="#konten-2" onclick="show('konten-2')">konten 2</a></li>
+                    <li><a href="#konten-1" onclick="show('konten-1')">DTPS (Mahasiswa) </a></li>
+                    <li><a href="#konten-2" onclick="show('konten-2')">DTPS (Tema Tesis/Disertasi)</a></li>
                 </div>
             </ul>
         </div>
@@ -70,20 +70,22 @@ include "TableController.php";
                 $con = new TableController($db);
                 $result = $con->getTabel6a_PenelitianDTPSMahasiswa();
                 $nomor = 1;
-                for($x=0; $x<sizeof($result); $x++){
+                for($x=0; $x<sizeof($result[0]); $x++){
                     $counter = 1;
                     echo "<tr>";
                     echo "<td>".$nomor."</td>";
                     $nomor++;
-                    for($y=0;$y<5;$y++){
-                        echo "<td>".$result[$x][$counter]."</td>";
-                        $counter++;
-                    }
+                    echo "<td>".$result[0][$x]['namaDosen']."</td>";
+                    echo "<td>".$result[0][$x]['temaPenelitian']."</td>";
+                    echo "<td>".$result[0][$x]['namaMahasiswa']."</td>";
+                    echo "<td>".$result[0][$x]['judulKegiatan']."</td>";
+                    echo "<td>".$result[0][$x]['tahun']."</td>";
                 }
             ?>
             </table>
         </div>
         <div class="konten" id="konten-2">
+            <p>Under Maintenance</p>
             <h1>Penelitian DTPS yang Menjadi Rujukan Tema Tesis/Disertasi</h1>
             <table>
                 <tr>
