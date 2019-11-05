@@ -42,6 +42,76 @@
         <div class="konten" id="konten-2">
             dsa
         </div>
+            
+        <div class="konten" id="konten-6">
+            <div>
+                <p>Tabel 8.f.1) Publikasi Ilmiah mahasiswa</p>
+                <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana/Magister/Doktor.</u></p>
+                <table id="tbl-konten">
+                    <tr style="background-color: darkgrey">
+                        <th rowspan="2">No.</th>
+                        <th rowspan="2">Media Publikasi</th>
+                        <th colspan="3">Jumlah Judul</th>
+                        <th rowspan="2">Jumlah</th>
+                    </tr>
+                    <tr style="background-color: darkgrey">
+                        <td>TS-2</td>
+                        <td>TS-1</td>
+                        <td>TS</td>
+                    </tr>
+                    <tr style="background-color: darkgrey">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr style="background-color: #ffff">
+                        <td>TS-1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <p>Tabel 8.f.1) Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa</p>
+                <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana Terapan/Magister Terapan/Doktor Terapan.</u></p>
+                <table id="tbl-konten">
+                    <tr style="background-color: darkgrey">
+                        <th rowspan="2">No.</th>
+                        <th rowspan="2">Jenis</th>
+                        <th colspan="3">Jumlah Judul</th>
+                        <th rowspan="2">Jumlah</th>
+                    </tr>
+                    <tr style="background-color: darkgrey">
+                        <td>TS-2</td>
+                        <td>TS-1</td>
+                        <td>TS</td>
+                    </tr>
+                    <tr style="background-color: darkgrey">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr style="background-color: #ffff">
+                        <td>TS-1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
         <script>
             close();
             function close() {
