@@ -1,7 +1,16 @@
+<?php
+    include "SQL.php";
+    include "TableController.php";
+?>
 <head>
         <title>Pengabdian Pada Masyarakat</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <style>
+            table, th, td {
+            border: 2px solid black;
+            }
+        </style>
     </head>
     <body style="height: 100%">
         <div class="judul-block">
@@ -32,6 +41,45 @@
             </ul>
         </div>
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
+        <div id="tabelPKM">
+            <table>
+            <tr>
+                <td>No</td>
+                <td>Nama Dosen</td>
+                <td>Tema PkM sesuai Roadmap</td>
+                <td>Nama Mahasiswa</td>
+                <td>Judul Kegiatan</td>
+                <td>Tahun</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            
+            <?php
+                $db = new SQL();
+                $con = new TableController($db);
+                $result = $con->getTabel7_PKMDTPSMahasiswa();
+                $no = 1;
+                for($x=0; $x<sizeof($result[0]); $x++){
+                    echo "<tr>";
+                    echo "<td>".$no."</td>";
+                    echo "<td>".$result[0][$x]['namaDosen']."</td>";
+                    echo "<td>".$result[0][$x]['temaPKM']."</td>";
+                    echo "<td>".$result[0][$x]['namaMahasiswa']."</td>";
+                    echo "<td>".$result[0][$x]['judulKegiatan']."</td>";
+                    echo "<td>".$result[0][$x]['tahun']."</td>";
+                    echo "</tr>";
+                    $no += 1; 
+                }
+            ?>
+            </table>
+        </div>
+        
         <div class="konten" id="konten-1">
             asd
         </div>
