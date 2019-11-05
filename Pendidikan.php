@@ -31,17 +31,15 @@
                 </div>  
                 <div>
                     <!--Masukan id div konten kalian sesuai dengan format dibawah-->
-                    <li><a href="#konten-1" onclick="show('konten-1')">konten 1</a></li>
-                    <li><a href="#konten-2" onclick="show('konten-2')">konten 2</a></li>
+                    <li><a href="#IntegrasiKegiatanPenelitian" onclick="show('konten-1')">Integrasi Kegiatan Penelitian/PkM dalam Pembelajaran</a></li>
+                    <li><a href="#Kurikulum" onclick="show('konten-2')">Kurikulum</a></li>
+                    <li><a href="#KepuasanMahasiswa" onclick="show('konten-3')">Kepuasan Mahasiswa</a></li>
                 </div>
             </ul>
         </div>
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
         <div class="konten" id="konten-1">
-            asdasd
-        </div>
-        <div class="konten" id="konten-2">
-            <h1> Integrasi Kegiatan Penelitian/PkM dalam Pembelajaran</h1>
+            <h1>Integrasi Kegiatan Penelitian/PkM dalam Pembelajaran</h1>
                 <table>
                  <tr>
                     <th>No.</th>
@@ -70,6 +68,12 @@
                     }
                 ?>
                 </table>  
+        </div>
+        <div class="konten" id="konten-2">
+            <h1>Under Maintenance!</h1>
+        </div>
+        <div class="konten" id="konten-3">
+            <h1>Under Maintenance!</h1>
         </div>
         <script>
             close();
