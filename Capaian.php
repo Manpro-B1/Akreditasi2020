@@ -56,12 +56,14 @@
             <p><u>Diisi oleh pengusul dari Program Studi Diploma Tiga</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
-                    <th>Tahun Lulus</th>
-                    <th>Jumlah Lulusan</th>
-                    <th>Jumlah Lulusan yang Terlacak</th>
-                    <th>Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
+                    <th rowspan="2">Tahun Lulus</th>
+                    <th rowspan="2">Jumlah Lulusan</th>
+                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>
+                    <th rowspan="2">Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
                     <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                    <th>WT&lt;3 bulan</th>
+                </tr>
+                <tr style="background-color: darkgrey">
+                    <th>WT &lt; 3 bulan</th>
                     <th>3 &le; WT &le; 6 bulan</th>
                     <th>WT &gt; 6 bulan</th>
                 </tr>
@@ -92,12 +94,14 @@
             <p><u>Diisi oleh pengusul dari Program Studi Sarjana</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
-                    <th>Tahun Lulus</th>
-                    <th>Jumlah Lulusan</th>
-                    <th>Jumlah Lulusan yang Terlacak</th>
-                    <th>Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
+                    <th rowspan="2">Tahun Lulus</th>
+                    <th rowspan="2">Jumlah Lulusan</th>
+                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>
+                    <th rowspan="2">Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
                     <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                    <th>WT&lt;3 bulan</th>
+                </tr>
+                <tr style="background-color: darkgrey">
+                    <th>WT &lt; 3 bulan</th>
                     <th>3 &le; WT &le; 6 bulan</th>
                     <th>WT &gt; 6 bulan</th>
                 </tr>
@@ -128,12 +132,14 @@
             <p><u>Diisi oleh pengusul dari Program Studi Sarjana Terapan</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
-                    <th>Tahun Lulus</th>
-                    <th>Jumlah Lulusan</th>
-                    <th>Jumlah Lulusan yang Terlacak</th>
-                    <th>Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
+                    <th rowspan="2">Tahun Lulus</th>
+                    <th rowspan="2">Jumlah Lulusan</th>
+                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>
+                    <th rowspan="2">Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
                     <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                    <th>WT&lt;3 bulan</th>
+                </tr>
+                <tr style="background-color: darkgrey">
+                    <th>WT &lt; 3 bulan</th>
                     <th>3 &le; WT &le; 6 bulan</th>
                     <th>WT &gt; 6 bulan</th>
                 </tr>
@@ -167,11 +173,13 @@
             <p><u>Diisi oleh pengusul dari Program Studi Diploma Tiga</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
-                    <th>Tahun Lulus</th>
-                    <th>Jumlah Lulusan</th>
-                    <th>Jumlah Lulusan yang Terlacak</th>
-                    <th>Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
+                    <th rowspan="2">Tahun Lulus</th>
+                    <th rowspan="2">Jumlah Lulusan</th>
+                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>
+                    <th rowspan="2">Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
                     <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
+                </tr>
+                <tr style="background-color: darkgrey">
                     <th>Rendah</th>
                     <th>Sedang</th>
                     <th>Tinggi</th>
