@@ -44,83 +44,6 @@
     <div class="konten" id="konten-2">
         dsa
     </div>
-    <div class="konten" id="konten-4">
-        <div style="text-align:center; font-weight: bold; font-size: 17px">
-            <p>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada program Diploma
-                Tiga/Sarjana/Sarjana Terapan.</p>
-        </div>
-
-        <!-- Diploma 3 -->
-        <div>
-            <p>Tabel 8.1) Waktu Tunggu Lulusan</p>
-            <p><u>Diisi oleh pengusul dari Program Studi Diploma Tiga</u></p>
-            <table id="tbl-konten">
-                <tr style="background-color: darkgrey">
-                    <th>Tahun Lulus</th>
-                    <th>Jumlah Lulusan</th>
-                    <th>Jumlah Lulusan yang Terlacak</th>
-                    <th>Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
-                    <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                    <th>WT&lt;3 bulan</th>
-                    <th>3 &le; WT &le; 6 bulan</th>
-                    <th>WT &gt; 6 bulan</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-                <tr style="background-color: #ffff">
-                    <td>TS-1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- Sarjana -->
-        <div>
-            <p>Tabel 8.1) Waktu Tunggu Lulusan</p>
-            <p><u>Diisi oleh pengusul dari Program Studi Sarjana</u></p>
-            <table id="tbl-konten">
-                <tr style="background-color: darkgrey">
-                    <th>Tahun Lulus</th>
-                    <th>Jumlah Lulusan</th>
-                    <th>Jumlah Lulusan yang Terlacak</th>
-                    <th>Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
-                    <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                    <th>WT&lt;3 bulan</th>
-                    <th>3 &le; WT &le; 6 bulan</th>
-                    <th>WT &gt; 6 bulan</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-                <tr style="background-color: #ffff">
-                    <td>TS-1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
             
         <div class="konten" id="konten-6">
             <div>
@@ -189,7 +112,106 @@
                     </tr>
                 </table>
             </div>
+            <div>
+                <p>Tabel 8.f.2) Karya ilmiah mahasiswa yang disitasi</p>
+                <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana Terapan/Magister Terapan/Doktor Terapan.</u></p>
+                <table id="tbl-konten">
+                <tr style="background-color: darkgrey">
+                    <th>No</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Judul Artikel yang Disitasi (Jurnal/Buku, Volume, Tahun, Nomor, Halaman)</th>
+                    <th>Jumlah Sitasi</th>
+                    
+                </tr>
+                <tr style="background-color: darkgrey">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                 	
+                </tr>
+                <tr style="background-color: #ffff">
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>                 
+                </tr>
+                 <tr style="background-color: #ffff">
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr style="background-color: #ffff">
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr style="background-color: #ffff">
+                    <td colspan="2">Jumlah</td>
+                    <td></td>
+                    <td></td>
+             
+                    
+                </tr>
+            </table>
+            </div>
         </div>
+
+        <div>
+                <p>Tabel 8.f.3) Produk/jasa yang dihasilkan mahasiswa yang diadopsi oleh industri/masyarakat</p>
+                <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana Terapan/Magister Terapan/Doktor Terapan.</u></p>
+                <table id="tbl-konten">
+                <tr style="background-color: darkgrey">
+                    <th>No</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Nama Produk/Jasa</th>
+                    <th>Deskripsi Produk/Jasa</th>
+                    <th>Bukti</th>
+                    
+                </tr>
+                <tr style="background-color: darkgrey">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                 	
+                </tr>
+                <tr style="background-color: #ffff">
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>   
+                    <td></td>              
+                </tr>
+                 <tr style="background-color: #ffff">
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr style="background-color: #ffff">
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr style="background-color: #ffff">
+                    <td colspan="2">...</td>
+                    <td></td>
+                    <td style="background-color: darkgrey"></td>
+                    <td style="background-color: darkgrey"></td>
+                    
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        
 
         <script>
             close();
