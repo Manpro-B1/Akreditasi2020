@@ -121,110 +121,77 @@
                 </tr>
             </table>
         </div>
-
-        <!-- Sarjana Terapan -->
-        <div>
-            <p>Tabel 8.1) Waktu Tunggu Lulusan</p>
-            <p><u>Diisi oleh pengusul dari Program Studi Sarjana Terapan</u></p>
-            <table id="tbl-konten">
-                <tr style="background-color: darkgrey">
-                    <th>Tahun Lulus</th>
-                    <th>Jumlah Lulusan</th>
-                    <th>Jumlah Lulusan yang Terlacak</th>
-                    <th>Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
-                    <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                    <th>WT&lt;3 bulan</th>
-                    <th>3 &le; WT &le; 6 bulan</th>
-                    <th>WT &gt; 6 bulan</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-                <tr style="background-color: #ffff">
-                    <td>TS-1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <br>
-        <div style="text-align:center; font-weight: bold; font-size: 17px">
-            <h3>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada <br> program Diploma
-                Tiga/Sarjana/Sarjana Terapan/Magister/Magister Terapan.</h3>
-        </div>
-        <div>
-            <p>Tabel 8.2) Kesesuaian Bidang Kerja Lulusan</p>
-            <p><u>Diisi oleh pengusul dari Program Studi Diploma Tiga</u></p>
-            <table id="tbl-konten">
-                <tr style="background-color: darkgrey">
-                    <th>Tahun Lulus</th>
-                    <th>Jumlah Lulusan</th>
-                    <th>Jumlah Lulusan yang Terlacak</th>
-                    <th>Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
-                    <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                    <th>Rendah</th>
-                    <th>Sedang</th>
-                    <th>Tinggi</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-                <tr style="background-color: #ffff">
-                    <td>TS-1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-            <div class="keterangan">
-                <p>Keterangan:</p>
-                <ol>
-                    <li>
-                        Jenis pekerjaan/posisi jabatan dalam pekerjaan tidak sesuai atau kurang sesuai
-                        dengan profil lulusan yang direncanakan dalam dokumen kurikulum.
-                    </li>
-                    <li>
-                        Jenis pekerjaan/posisi jabatan dalam pekerjaan cukup sesuai dengan profil lulusan
-                        yang direncanakan dalam dokumen kurikulum.
-                    </li>
-                    <li>
-                        Jenis pekerjaan/posisi jabatan dalam pekerjaan sesuai atau sangat sesuai dengan
-                        profil lulusan yang direncanakan dalam dokumen kurikulum.
-                    </li>
-                </ol>
-                <br>
+            
+        <div class="konten" id="konten-6">
+            <div>
+                <p>Tabel 8.f.1) Publikasi Ilmiah mahasiswa</p>
+                <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana/Magister/Doktor.</u></p>
+                <table id="tbl-konten">
+                    <tr style="background-color: darkgrey">
+                        <th rowspan="2">No.</th>
+                        <th rowspan="2">Media Publikasi</th>
+                        <th colspan="3">Jumlah Judul</th>
+                        <th rowspan="2">Jumlah</th>
+                    </tr>
+                    <tr style="background-color: darkgrey">
+                        <td>TS-2</td>
+                        <td>TS-1</td>
+                        <td>TS</td>
+                    </tr>
+                    <tr style="background-color: darkgrey">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr style="background-color: #ffff">
+                        <td>TS-1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <p>Tabel 8.f.1) Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa</p>
+                <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana Terapan/Magister Terapan/Doktor Terapan.</u></p>
+                <table id="tbl-konten">
+                    <tr style="background-color: darkgrey">
+                        <th rowspan="2">No.</th>
+                        <th rowspan="2">Jenis</th>
+                        <th colspan="3">Jumlah Judul</th>
+                        <th rowspan="2">Jumlah</th>
+                    </tr>
+                    <tr style="background-color: darkgrey">
+                        <td>TS-2</td>
+                        <td>TS-1</td>
+                        <td>TS</td>
+                    </tr>
+                    <tr style="background-color: darkgrey">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr style="background-color: #ffff">
+                        <td>TS-1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
             </div>
         </div>
 
-    </div>
-    <script>
-        close();
-        function close() {
-            var x = document.getElementsByClassName("konten");
-            for (var i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-        }
-        function show(id) {
+        <script>
             close();
             document.getElementById(id).style.display = "block";
         }
