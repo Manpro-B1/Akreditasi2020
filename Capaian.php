@@ -30,10 +30,10 @@
                 <!--Masukan id div konten kalian sesuai dengan format dibawah-->
                 <li><a href="#konten-1" onclick="show('konten-1')">Capaian Pembelajaran</a></li>
                 <li><a href="#konten-2" onclick="show('konten-2')">Prestasi Mahasiswa</a></li>
-                <li><a href="#konten-2" onclick="show('konten-3')">Efektivitas dan Produktivitas Pendidikan</a></li>
-                <li><a href="#konten-2" onclick="show('konten-4')">Daya Saing Lulusan</a></li>
-                <li><a href="#konten-2" onclick="show('konten-5')">Kinerja Lulusan</a></li>
-                <li><a href="#konten-2" onclick="show('konten-6')">Luaran Penelitian dan PkM Mahasiswa</a></li>
+                <li><a href="#konten-3" onclick="show('konten-3')">Efektivitas dan Produktivitas Pendidikan</a></li>
+                <li><a href="#konten-4" onclick="show('konten-4')">Daya Saing Lulusan</a></li>
+                <li><a href="#konten-5" onclick="show('konten-5')">Kinerja Lulusan</a></li>
+                <li><a href="#konten-6" onclick="show('konten-6')">Luaran Penelitian dan PkM Mahasiswa</a></li>
             </div>
         </ul>
     </div>
