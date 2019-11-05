@@ -99,7 +99,10 @@
                     }  
                 }
             ?>
-            </table>            
+            </table>
+        </div>
+        <div class="konten" id="konten-2">
+            dsa
         </div>
         <script>
             close();
