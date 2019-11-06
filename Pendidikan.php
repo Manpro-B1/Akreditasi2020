@@ -2,7 +2,6 @@
     	include "SQL.php";
         include "TableController.php";
 ?>
-
 <head>
         <title>Pendidikan</title>
         <meta charset="UTF-8">
