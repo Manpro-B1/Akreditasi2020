@@ -10,6 +10,7 @@
         <title>Sumber Daya Manusia</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </head>
     <body style="height: 100%">
         <div class="judul-block">
@@ -107,6 +108,9 @@
                         $res = $tController->getTabel3a1_DosenTetapUPPS();
                         $i = 1;
 
+                        $sesuai = 0;
+                        $tidakSesuai = 0;
+
                         foreach ($res[0] as $tt=>$value) {
                             echo '<tr>';
                             echo '<td>'.$i++.'</td>';
@@ -122,6 +126,13 @@
 
                             echo '<td>'.$value['BidangKeahlian'].'</td>';
                             echo '<td>'.$value['KesesuaianKompetensi'].'</td>';
+
+                            if (!empty($value['KesesuaianKompetensi'])) {
+                                $sesuai++;
+                            } else {
+                                $tidakSesuai++;
+                            }
+
                             echo '<td>'.$value['JabatanAkademik'].'</td>';
                             echo '<td>'.$value['SertifikatPendidik'].'</td>';
                             
@@ -139,8 +150,43 @@
                             } else {
                                 echo '<td>-</td>';
                             }
-                        } 
+                        }
+
+                        $data = json_encode(array(
+                            array(
+                                "label" => "Sesuai",
+                                "y" => $sesuai,
+                            ),
+                            array(
+                                "label" => "Tidak Sesuai",
+                                "y" => $tidakSesuai,
+                            ),
+                        ));
                     ?>
+
+                    <div id="chartContainer1"></div>
+
+                    <script>
+
+                            var chart = new CanvasJS.Chart("chartContainer1", {
+	                            animationEnabled: true,
+	                            exportEnabled: true,
+	                            theme: "light1", // "light1", "light2", "dark1", "dark2"
+	                            title:{
+		                            text: "Kesesuaian Kompetensi Dosen dengan Bidang yang diajar"
+	                            },
+	                            data: [{
+		                            type: "column", //change type to bar, line, area, pie, etc
+		                            indexLabelFontColor: "#5A5757",
+		                            indexLabelPlacement: "outside",   
+		                            dataPoints: <?= $data ?>,
+	                            },]
+                            });
+
+                            chart.render();
+                        
+                    </script>
+
                 </tbody>
             </table>
         </div>
@@ -200,6 +246,18 @@
                     <?php
                         $res = $tController->getTabel3a2_DosenPembimbingUtamaTugasAkhir();
 
+                        $psAkred = array(
+                            'ts2' => 0,
+                            'ts1' => 0,
+                            'ts' => 0,
+                        );
+
+                        $psNonAkred = array(
+                            'ts2' => 0,
+                            'ts1' => 0,
+                            'ts' => 0,
+                        );
+
                         foreach ($res[0] as $tt=>$value) {
                             echo '<tr>';
                             echo '<td>'.$value['Nomor'].'</td>';
@@ -207,15 +265,90 @@
                             echo '<td>'.$value['TS-2'].'</td>';
                             echo '<td>'.$value['TS-1'].'</td>';
                             echo '<td>'.$value['TS'].'</td>';
+
+                            $psAkred['ts2'] += $value['TS-2'];
+                            $psAkred['ts1'] += $value['TS-1'];
+                            $psAkred['ts'] += $value['TS'];
+
                             echo '<td>'.number_format($value['Rata2'], 2).'</td>';
                             echo '<td>'.$value['TS-2b'].'</td>';
                             echo '<td>'.$value['TS-1b'].'</td>';
                             echo '<td>'.$value['TSb'].'</td>';
+
+                            $psNonAkred['ts2'] += $value['TS-2b'];
+                            $psNonAkred['ts1'] += $value['TS-1b'];
+                            $psNonAkred['ts'] += $value['TSb'];
+
                             echo '<td>'.number_format($value['Rata2b'], 2).'</td>';
                             echo '<td>'.number_format($value['Rata2_semua'], 2).'</td>';
                             echo '</tr>';
                         }
+
+                        $data1 = json_encode(array(
+                            array(
+                                "label" => "TS-2",
+                                "y" => $psAkred['ts2'],
+                                "indexLabel" => "Pada PS yang Diakreditasi",
+                            ),
+                            array(
+                                "label" => "TS-1",
+                                "y" => $psAkred['ts1'],
+                                "indexLabel" => "Pada PS yang Diakreditasi"
+                            ),
+                            array(
+                                "label" => "TS",
+                                "y" => $psAkred['ts'],
+                                "indexLabel" => "Pada PS yang Diakreditasi",
+                            ),
+                        ));
+
+                        $data2 = json_encode(array(
+                            array(
+                                "label" => "TS-2",
+                                "y" => $psNonAkred['ts2'],
+                                "indexLabel" => "Pada PS Non Akreditasi",
+                            ),
+                            array(
+                                "label" => "TS-1",
+                                "y" => $psNonAkred['ts1'],
+                                "indexLabel" => "Pada PS Non Akreditasi",
+                            ),
+                            array(
+                                "label" => "TS",
+                                "y" => $psNonAkred['ts'],
+                                "indexLabel" => "Pada PS Non Akreditasi",
+                            ),
+                        ));
                     ?>
+
+<div id="chartContainer2"></div>
+
+<script>
+
+        var chart = new CanvasJS.Chart("chartContainer2", {
+            animationEnabled: true,
+            exportEnabled: true,
+            theme: "light1", // "light1", "light2", "dark1", "dark2"
+            title:{
+                text: "Kesesuaian Kompetensi Dosen dengan Bidang yang diajar"
+            },
+            data: [{
+                type: "column", //change type to bar, line, area, pie, etc
+                indexLabelFontColor: "#5A5757",
+                indexLabelPlacement: "outside",   
+                dataPoints: <?= $data1 ?>,
+            },
+            {
+                type: "column", //change type to bar, line, area, pie, etc
+                indexLabelFontColor: "#5A5757",
+                indexLabelPlacement: "outside",   
+                dataPoints: <?= $data2 ?>,
+            },]
+        });
+
+        chart.render();
+        </script>
+    
                 </tbody>
             </table>
         </div>
@@ -276,6 +409,10 @@
                         $res = $tController->getTabel3a3_EWMPDosenTetapPerguruanTinggi();
                         $i = 1;
 
+                        $pembelajaranPS = 0;
+                        $pembelajaranPSLain = 0;
+                        $pembelajaranPSLuar = 0;
+
                         foreach ($res[0] as $tt=>$value) {
                             echo '<tr>';
                             echo '<td>'.$i++.'</td>';
@@ -297,9 +434,51 @@
                             echo '<td>'.$value['Jumlah'].'</td>';
                             echo '<td>'.$value['Rata2'].'</td>';
                             echo '</tr>';
+
+                            $pembelajaranPS += $value['PembelajaranPS'];
+                            $pembelajaranPSLain += $value['PembelajaranPSLain'];
+                            $pembelajaranPSLuar += $value['PembelajaranPSLuar'];
                         }
+
+                        $data3 = json_encode(array(
+                            array(
+                                "label" => "Pembelajaran PS",
+                                "y" => $pembelajaranPS,
+                            ),
+                            array(
+                                "label" => "Pembelajaran PS Lain",
+                                "y" => $pembelajaranPSLain,
+                            ),
+                            array(
+                                "label" => "Pembelajaran PS Luar",
+                                "y" => $pembelajaranPSLuar,
+                            ),
+                        ));
                     ?>
                 </tbody>
+
+                <div id="chartContainer3"></div>
+
+                    <script>
+
+                            var chart = new CanvasJS.Chart("chartContainer3", {
+	                            animationEnabled: true,
+	                            exportEnabled: true,
+	                            theme: "light1", // "light1", "light2", "dark1", "dark2"
+	                            title:{
+		                            text: "Ekuivalen Waktu Mengajar Penuh"
+	                            },
+	                            data: [{
+		                            type: "column", //change type to bar, line, area, pie, etc
+		                            indexLabelFontColor: "#5A5757",
+		                            indexLabelPlacement: "outside",   
+		                            dataPoints: <?= $data3 ?>,
+	                            },]
+                            });
+
+                            chart.render();
+                    </script>
+                        
             </table>
         </div>
         <div class="konten" id="konten-4">
@@ -342,6 +521,7 @@
                     <?php
                         $res = $tController->getTabel3a4_DosenTidakTetapUPPS();
                         $sesuai = 0;
+                        $tidakSesuai = 0;
 
                         foreach ($res[0] as $tt=>$value) {
                             echo '<tr>';
@@ -381,6 +561,7 @@
                                 echo '<td>V</td>';
                                 $sesuai++;
                             } else {
+                                $tidakSesuai++;
                                 echo '<td>-</td>';
                             }
                             echo '</tr>';
@@ -393,8 +574,42 @@
                         echo '<td></td>';
                         echo '<td>'.$sesuai.'</td>';
                         echo '</tr>';
+
+                        $data4 = json_encode(array(
+                            array(
+                                "label" => "Sesuai",
+                                "y" => $sesuai,
+                            ),
+                            array(
+                                "label" => "Tidak Sesuai",
+                                "y" => $tidakSesuai,
+                            ),
+                        ));
                     ?>
                 </tbody>
+
+                <div id="chartContainer4"></div>
+
+                    <script>
+
+                            var chart = new CanvasJS.Chart("chartContainer4", {
+	                            animationEnabled: true,
+	                            exportEnabled: true,
+	                            theme: "light1", // "light1", "light2", "dark1", "dark2"
+	                            title:{
+		                            text: "Kesesuaian Bidang Keahlian"
+	                            },
+	                            data: [{
+		                            type: "column", //change type to bar, line, area, pie, etc
+		                            indexLabelFontColor: "#5A5757",
+		                            indexLabelPlacement: "outside",   
+		                            dataPoints: <?= $data ?>,
+	                            },]
+                            });
+
+                            chart.render();
+                        
+                    </script>
             </table>
         </div>
         <div class="konten" id="konten-5">
@@ -527,9 +742,47 @@
                         echo '<td>'.$nasional.'</td>';
                         echo '<td>'.$internasional.'</td>';
                         echo '<td></td>';
-                        echo '</tr>'
+                        echo '</tr>';
+
+                        $data6 = json_encode(array(
+                            array(
+                                "label" => "Wilayah",
+                                "y" => $wilayah,
+                            ),
+                            array(
+                                "label" => "Nasional",
+                                "y" => $nasional,
+                            ),
+                            array(
+                                "label" => "Internasional",
+                                "y" => $internasional,
+                            ),
+                        ));
                     ?>
                 </tbody>
+
+                <div id="chartContainer6"></div>
+
+                    <script>
+
+                            var chart = new CanvasJS.Chart("chartContainer6", {
+	                            animationEnabled: true,
+	                            exportEnabled: true,
+	                            theme: "light1", // "light1", "light2", "dark1", "dark2"
+	                            title:{
+		                            text: "Pengakuan / Rekognisi DTPS"
+	                            },
+	                            data: [{
+		                            type: "column", //change type to bar, line, area, pie, etc
+		                            indexLabelFontColor: "#5A5757",
+		                            indexLabelPlacement: "outside",   
+		                            dataPoints: <?= $data ?>,
+	                            },]
+                            });
+
+                            chart.render();
+                        
+                    </script>
             </table>
         </div>
         <div class="konten" id="konten-7">
