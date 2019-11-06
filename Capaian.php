@@ -37,11 +37,223 @@
         </div>
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
         <div class="konten" id="konten-1">
-            asd
+        <table id="tbl-konten">
+            <p>Tabel 8.a IPK Lulusan</p>
+                <tr style="background-color: darkgrey;border: 1px solid black">
+                    <th style="border: 1px solid black;color: black" rowspan="2">Tahun Lulus.</th>
+                    <th style="border: 1px solid black;color: black" rowspan="2">Jumlah Lulusan</th>
+                    <th style="border: 1px solid black;color: black" colspan="3">Indeks Prestasi Kumulatif (IPK)</th>
+                </tr>
+                <tr style="background-color: darkgrey;border: 1px solid black;">
+                    <th style="border: 1px solid black;color: black">Min.</th>
+                    <th style="border: 1px solid black;color: black">Rata-rata</th>
+                    <th style="border: 1px solid black;color: black">Maks.</th>
+                </tr>
+                <tr style="background-color: darkgrey;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">1</td>
+                    <td style="border: 1px solid black;color: black">2</td>
+                    <td style="border: 1px solid black;color: black">3</td>
+                    <td style="border: 1px solid black;color: black">4</td>
+                    <td style="border: 1px solid black;color: black">5</td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">TS-1</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">TS-1</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">TS</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>                                 
+            </table>
         </div>
+
         <div class="konten" id="konten-2">
-            asd
+            <table id="tbl-konten">
+            <p>Tabel 8.b.1 Prestasi Akademik</p>
+                <tr style="background-color: darkgrey;border: 1px solid black">
+                    <th style="border: 1px solid black;color: black" rowspan="2">No.</th>
+                    <th style="border: 1px solid black;color: black" rowspan="2">Nama Kegiatan</th>
+                    <th style="border: 1px solid black;color: black" rowspan="2">Tahun Perolehan</th>
+                    <th style="border: 1px solid black;color: black" colspan="3">Tingkat</th>
+                    <th style="border: 1px solid black;color: black" rowspan="2">Prestasi yang dicapai</th>
+                </tr>
+                <tr style="background-color: darkgrey;border: 1px solid black;">
+                    <th style="border: 1px solid black;color: black">Lokal/Wilayah</th>
+                    <th style="border: 1px solid black;color: black">Nasional</th>
+                    <th style="border: 1px solid black;color: black">Internasional</th>
+                </tr>
+                <tr style="background-color: darkgrey;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">1</td>
+                    <td style="border: 1px solid black;color: black">2</td>
+                    <td style="border: 1px solid black;color: black">3</td>
+                    <td style="border: 1px solid black;color: black">4</td>
+                    <td style="border: 1px solid black;color: black">5</td>
+                    <td style="border: 1px solid black;color: black">6</td>
+                    <td style="border: 1px solid black;color: black">7</td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">1</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">2</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">3</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black">
+                    <td style="border: 1px solid black;color: black">4</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black">
+                    <td style="border: 1px solid black;color: black">5</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black">
+                    <td style="border: 1px solid black;color: black">...</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>   
+                <tr style="background-color: #ffff;border: 1px solid black;border-top: 2px solid black;">
+                    <td style="border: 1px solid black;color: black"  colspan="3"><strong>Jumlah</strong></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black;background-color: darkgrey"></td>
+                </tr>
+            </table>
+
+            <table id="tbl-konten">
+            <p>Tabel 8.b.1 Prestasi Nonakademik Mahasiswa</p>
+                <tr style="background-color: darkgrey;border: 1px solid black">
+                    <th style="border: 1px solid black;color: black" rowspan="2">No.</th>
+                    <th style="border: 1px solid black;color: black" rowspan="2">Nama Kegiatan</th>
+                    <th style="border: 1px solid black;color: black" rowspan="2">Tahun Perolehan</th>
+                    <th style="border: 1px solid black;color: black" colspan="3">Tingkat</th>
+                    <th style="border: 1px solid black;color: black" rowspan="2">Prestasi yang dicapai</th>
+                </tr>
+                <tr style="background-color: darkgrey;border: 1px solid black;">
+                    <th style="border: 1px solid black;color: black">Lokal/Wilayah</th>
+                    <th style="border: 1px solid black;color: black">Nasional</th>
+                    <th style="border: 1px solid black;color: black">Internasional</th>
+                </tr>
+                <tr style="background-color: darkgrey;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">1</td>
+                    <td style="border: 1px solid black;color: black">2</td>
+                    <td style="border: 1px solid black;color: black">3</td>
+                    <td style="border: 1px solid black;color: black">4</td>
+                    <td style="border: 1px solid black;color: black">5</td>
+                    <td style="border: 1px solid black;color: black">6</td>
+                    <td style="border: 1px solid black;color: black">7</td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">1</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">2</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black;">
+                    <td style="border: 1px solid black;color: black">3</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black">
+                    <td style="border: 1px solid black;color: black">4</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black">
+                    <td style="border: 1px solid black;color: black">5</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>
+                <tr style="background-color: #ffff;border: 1px solid black">
+                    <td style="border: 1px solid black;color: black">...</td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                </tr>   
+                <tr style="background-color: #ffff;border: 1px solid black;border-top: 2px solid black;">
+                    <td style="border: 1px solid black;color: black"  colspan="3"><strong>Jumlah</strong></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black"></td>
+                    <td style="border: 1px solid black;color: black;background-color: darkgrey"></td>
+                </tr>
+            </table>
         </div>
+        
         <div class="konten" id="konten-efektivitas">
             <p>Tabel 8.c. Masa Studi Lulusan Program Studi</p>
             <table id="tbl-konten">
