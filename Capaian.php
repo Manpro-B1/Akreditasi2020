@@ -58,7 +58,7 @@
 
         <!-- Diploma 3 -->
         <div>
-            <p>Tabel 8.1) Waktu Tunggu Lulusan</p>
+            <p>Tabel 8.d.1) Waktu Tunggu Lulusan</p>
             <p><u>Diisi oleh pengusul dari Program Studi Diploma Tiga</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
@@ -112,9 +112,13 @@
             </table>
         </div>
 
+        <br />
+        <br />
+        <br />
+
         <!-- Sarjana -->
         <div>
-            <p>Tabel 8.1) Waktu Tunggu Lulusan</p>
+            <p>Tabel 8.d.2) Waktu Tunggu Lulusan</p>
             <p><u>Diisi oleh pengusul dari Program Studi Sarjana</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
@@ -168,9 +172,13 @@
             </table>
         </div>
 
+        <br />
+        <br />
+        <br />
+
         <!-- Sarjana Terapan -->
         <div>
-            <p>Tabel 8.1) Waktu Tunggu Lulusan</p>
+            <p>Tabel 8.d.3) Waktu Tunggu Lulusan</p>
             <p><u>Diisi oleh pengusul dari Program Studi Sarjana Terapan</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
@@ -229,7 +237,7 @@
                 Tiga/Sarjana/Sarjana Terapan/Magister/Magister Terapan.</h3>
         </div>
         <div>
-            <p>Tabel 8.2) Kesesuaian Bidang Kerja Lulusan</p>
+            <p>Tabel 8.d.4) Kesesuaian Bidang Kerja Lulusan</p>
             <p><u>Diisi oleh pengusul dari Program Studi Diploma Tiga</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
@@ -368,8 +376,8 @@
         <br />
         <br />
         <br />
-        <br />
         <div>
+            <p>Tabel 8.e.2) Tingkat Kompetensi Lulusan</p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey;border: 1px solid black">
                     <th style="border: 1px solid black;color: black" rowspan="2">No.</th>
@@ -471,7 +479,7 @@
         <div style="text-align:center; font-weight: bold; font-size: 17px">
             <h3>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada <br> program Sarjana/Magister/Doktor.</h3>
         </div>
-            <p>Tabel 8.f.1) Publikasi Ilmiah mahasiswa</p>
+            <p>Tabel 8.f.1) Publikasi Ilmiah Mahasiswa</p>
             <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana/Magister/Doktor.</u></p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey">
@@ -509,8 +517,11 @@
                 ?>
             </table>
         </div>
+        <br />
+        <br />
+        <br />
         <div>
-            <p>Tabel 8.f.1) Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa</p>
+            <p>Tabel 8.f.1) Pergelaran Seminar Ilmiah Mahasiswa</p>
             <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana Terapan/Magister Terapan/Doktor
                     Terapan.</u></p>
             <table id="tbl-konten">
@@ -549,8 +560,54 @@
                 ?>
             </table>
         </div>
+        <br />
+        <br />
+        <br />
         <div>
-            <p>Tabel 8.f.2) Karya ilmiah mahasiswa yang disitasi</p>
+            <p>Tabel 8.f.4) Luaran Penelitian/PkM yang Dihasilkan Mahasiswa</p>
+            <table id="tbl-konten">
+                <tr style="background-color: darkgrey">
+                    <th>No</th>
+                    <th>Judul Luaran Penelitian/PKM</th>
+                    <th>Tahun</th>
+                    <th>Keterangan</th>
+                </tr>
+                <tr style="background-color: darkgrey">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <?php
+                    $result = $con->getTabel8f3_LuaranPenelitianPKMLainnyaMahasiswa();
+                    for($x=0; $x<sizeof($result[0]); $x++){
+                        $length = sizeOf($result[0]);
+                        $nomor = $x+1;
+                        echo "<tr style='background-color: white'>";
+                        echo "<td>".$nomor."</td>";
+                        echo "<td>".$result[0][$x]['JudulLuaran']."</td>";
+                        if($result[0][$x]['tahun'] == NULL){
+                            echo "<td>-</td>";
+                        }
+                        else{
+                            echo "<td>".$result[0][$x]['tahun']."</td>";
+                        }
+                        if($result[0][$x]['keterangan'] == ""){
+                            echo "<td>-</td>";
+                        }
+                        else{
+                            echo "<td>".$result[0][$x]['keterangan']."</td>";
+                        }
+                        echo "<tr>";
+                    }
+                ?>
+            </table>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            <p>Tabel 8.f.2) Karya ilmiah Mahasiswa yang Disitasi</p>
             <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana Terapan/Magister Terapan/Doktor
                     Terapan.</u></p>
             <table id="tbl-konten">
@@ -592,6 +649,9 @@
                 </tr>
             </table>
         </div>
+        <br />
+        <br />
+        <br />
         <div>
             <p>Tabel 8.f.3) Produk/jasa yang dihasilkan mahasiswa yang diadopsi oleh industri/masyarakat</p>
             <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana Terapan/Magister Terapan/Doktor
@@ -640,46 +700,6 @@
                     <td style="background-color: darkgrey"></td>
                     <td style="background-color: darkgrey"></td>
                 </tr>
-            </table>
-        </div>
-        <div>
-            <p>Tabel 8.f.4) Luaran penelitian/PkM yang dihasilkan mahasiswa</p>
-            <table id="tbl-konten">
-                <tr style="background-color: darkgrey">
-                    <th>No</th>
-                    <th>Judul Luaran Penelitian/PKM</th>
-                    <th>Tahun</th>
-                    <th>Keterangan</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <?php
-                    $result = $con->getTabel8f3_LuaranPenelitianPKMLainnyaMahasiswa();
-                    for($x=0; $x<sizeof($result[0]); $x++){
-                        $length = sizeOf($result[0]);
-                        $nomor = $x+1;
-                        echo "<tr style='background-color: white'>";
-                        echo "<td>".$nomor."</td>";
-                        echo "<td>".$result[0][$x]['JudulLuaran']."</td>";
-                        if($result[0][$x]['tahun'] == NULL){
-                            echo "<td>-</td>";
-                        }
-                        else{
-                            echo "<td>".$result[0][$x]['tahun']."</td>";
-                        }
-                        if($result[0][$x]['keterangan'] == ""){
-                            echo "<td>-</td>";
-                        }
-                        else{
-                            echo "<td>".$result[0][$x]['keterangan']."</td>";
-                        }
-                        echo "<tr>";
-                    }
-                ?>
             </table>
         </div>
     </div>
