@@ -32,6 +32,7 @@ getLulusanByTS									+		Tabel 8.a IPK Lulusan
 getTabelDataLulus								+
 getTabelPrestasiAkademik						+		Tabel 8.b.1 Prestasi Akademik
 getTabelPrestasiNonAkademik						+		Tabel 8.b.2 Prestasi Nonakademik Mahasiswa
+getTabelMasaStudiLulusan						+		Tabel 8.c. Masa Studi Lulusan Program Studi 
 getTabel8f1_partJurnalMahasiswa					+		Tabel 8.f.1 Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa
 getTabel8f1_PartSeminarMahasiswa				+		Tabel 8.f.1 Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa
 

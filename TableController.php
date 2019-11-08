@@ -371,7 +371,7 @@ class TableController
     }
 
     /**
-     * Fungsi untuk mengambildata lulusan pada TS, TS-1, dan TS-2
+     * Fungsi untuk mengambil data lulusan pada TS, TS-1, dan TS-2
      */
     function getFullDataLulusanByTS()
     {
@@ -391,6 +391,9 @@ class TableController
         return $result;
     }
 
+    /**
+     * Fungsi untuk mengambil data Masa Studi Lulusan Program Studi 
+     */
     function getTabelMasaStudiLulusan()
     {
         $query = "
