@@ -3,7 +3,7 @@
         <title>Pendidikan</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/4f75ac5aa8.js" crossorigin="anonymous"></script>
+      
     </head>
     <body style="height: 100%">
         <div class="judul-block">
