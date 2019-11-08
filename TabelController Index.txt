@@ -1,0 +1,38 @@
+getTabelKerjasama								+		Tabel 1 Kerjasama Tridharma
+
+getTabelSeleksiMahasiswa
+getTabelMahasiswaAsing
+
+getTabel3a1_DosenTetapUPPS						+		Tabel 3.a.1 Dosen Tetap Perguruan Tinggi
+getTabel3a2_DosenPembimbingUtamaTugasAkhir		+		Tabel 3.a.2 Dosen Pembimbing Utama Tugas Akhir
+getTabel3a3_EWMPDosenTetapPerguruanTinggi		+		Tabel 3.a.3 Ekuivalen Waktu Mengajar Penuh (EWMP) Dosen Tetap Perguruan Tinggi 
+getTabel3a4_DosenTidakTetapUPPS					+		Tabel 3.a.4 Dosen Tidak Tetap yang ditugaskan sebagai pengampu mata kuliah di Program Stud
+
+getTabel3a5_DosenPraktisi	
+
+getTabel3b1_RekognisiDTPS						+		Tabel 3.b.1 Pengakuan/Rekognisi DTPS 
+getTabel3b2_PenelitianDTPS						+		Tabel 3.b.2 Penelitian DTPS
+getTabel3b3_PKMDTPS								+		Tabel 3.b.3 Pengabdian kepada Masyarakat (PkM) DTPS
+getTabel3b4_PartJurnal							+		Tabel 3.b.4 Publikasi Ilmiah DTPS
+getTabel3b4_PartSeminar							+		Tabel 3.b.4 Publikasi Ilmiah DTPS
+getTabel3b4_PartTulisan							+		Tabel 3.b.4 Publikasi Ilmiah DTPS
+getTabel3b5_KaryaIlmiahDisitasi					+		Tabel 3.b.5 Karya ilmiah DTPS yang disitasi dalam 3 tahun terakhir
+
+getTabel3b6
+
+getTabel3b7_LuaranPenelitianPKMLainnya			+		Tabel 3.b.7 Luaran Penelitian/PkM Lainnya oleh DTPS
+getTabel4_PenggunaanDana						+		Tabel 4 Penggunaan Dana
+
+getTabel5b_IntegrasiKegiatanPenelitianPkM		+		Tabel 5.b Integrasi Kegiatan Penelitian/PkM dalam Pembelajaran
+
+getTabel6a_PenelitianDTPSMahasiswa				+		Tabel 6.a Penelitian DTPS yang melibatkan mahasiswa
+getTabel7_PKMDTPSMahasiswa						+		Tabel 7. PkM DTPS yang melibatkan mahasiswa
+ 
+getLulusanByTS									+		Tabel 8.a IPK Lulusan
+getTabelDataLulus								+
+getTabelPrestasiAkademik						+		Tabel 8.b.1 Prestasi Akademik
+getTabelPrestasiNonAkademik						+		Tabel 8.b.2 Prestasi Nonakademik Mahasiswa
+getTabel8f1_partJurnalMahasiswa					+		Tabel 8.f.1 Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa
+getTabel8f1_PartSeminarMahasiswa				+		Tabel 8.f.1 Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa
+
+getTabel8f3_LuaranPenelitianPKMLainnyaMahasiswa	+		Tabel 8.f.4 Luaran penelitian/PkM yang dihasilkan mahasiswa
