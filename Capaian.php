@@ -1,3 +1,7 @@
+<?php
+    	include "SQL.php";
+        include "TableController.php";
+?> 
 <head>
         <title>Capaian</title>
         <meta charset="UTF-8">
@@ -26,17 +30,17 @@
                 </div>  
                 <div>
                     <!--Masukan id div konten kalian sesuai dengan format dibawah-->
-                    <li><a href="#konten-1" onclick="show('konten-1')">konten 1</a></li>
-                    <li><a href="#konten-2" onclick="show('konten-2')">konten 2</a></li>
+                    <li><a href="#konten-1" onclick="show('konten-1')">Konten 1</a></li>
+                    <li><a href="#konten-2" onclick="show('konten-2')">Konten 2</a></li>
                 </div>
             </ul>
         </div>
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
         <div class="konten" id="konten-1">
-            asd
+        asd
         </div>
         <div class="konten" id="konten-2">
-            dsa
+        dsa
         </div>
         <script>
             close();

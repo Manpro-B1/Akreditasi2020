@@ -288,7 +288,41 @@ class TableController
     function getTabelPrestasiAkademik()
     {
         $query = " SELECT * FROM prestasi_mhs WHERE prestasi_mhs.Akademik = 'Akademik';";
-        $result = $this->connection->executeSelectQuery($query, []);
+        $result[] = $this->connection->executeSelectQuery($query, []);
+
+        $query = "SELECT
+                        'Jumlah' AS Jumlah,
+                        lokal.lokal AS Lokal,
+                        nasional.nasional AS Nasional,
+                        internasional.internasional as Internasional
+                    FROM
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as lokal
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Akademik' AND prestasi_mhs.Tingkat LIKE 'Lokal'
+                        ) AS lokal
+                        JOIN 
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as nasional
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Akademik' AND prestasi_mhs.Tingkat LIKE 'Nasional'
+                        ) AS nasional
+                        ON  lokal.id = nasional.id
+                        JOIN 
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as internasional
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Akademik' AND prestasi_mhs.Tingkat LIKE 'Internasional'
+                        ) AS internasional
+                        ON  lokal.id = internasional.id        
+                        ";
+        $result[] = $this->connection->executeSelectQuery($query, []);
         return $result;
     }
 
@@ -299,7 +333,41 @@ class TableController
     function getTabelPrestasiNonAkademik()
     {
         $query = " SELECT * FROM prestasi_mhs WHERE prestasi_mhs.Akademik = 'Non-akademik';";
-        $result = $this->connection->executeSelectQuery($query, []);
+        $result[] = $this->connection->executeSelectQuery($query, []);
+
+        $query = "SELECT
+                        'Jumlah' AS Jumlah,
+                        lokal.lokal AS Lokal,
+                        nasional.nasional AS Nasional,
+                        internasional.internasional as Internasional
+                    FROM
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as lokal
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Non-akademik' AND prestasi_mhs.Tingkat LIKE 'Lokal'
+                        ) AS lokal
+                        JOIN 
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as nasional
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Non-akademik' AND prestasi_mhs.Tingkat LIKE 'Nasional'
+                        ) AS nasional
+                        ON  lokal.id = nasional.id
+                        JOIN 
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as internasional
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Non-akademik' AND prestasi_mhs.Tingkat LIKE 'Internasional'
+                        ) AS internasional
+                        ON  lokal.id = internasional.id        
+                        ";
+        $result[] = $this->connection->executeSelectQuery($query, []);
         return $result;
     }
 
@@ -509,7 +577,7 @@ class TableController
         
         ";
 
-        $result = $this->connection->executeSelectQuery($query, []);
+        $result = $this->connection->executeStoredProcedure($query, []);
         return $result;
     }
 }
