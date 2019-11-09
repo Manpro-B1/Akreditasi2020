@@ -506,12 +506,21 @@
                     for($x=0; $x<sizeof($result[0]); $x++){
                         $nomor = $x+1;
                         echo "<tr style='background-color: white'>";
-                        echo "<td>".$nomor."</td>";
-                        echo "<td>".$result[0][$x]['jenisPublikasi']."</td>";
-                        echo "<td>".$result[0][$x]['ts2']."</td>";
-                        echo "<td>".$result[0][$x]['ts1']."</td>";
-                        echo "<td>".$result[0][$x]['ts']."</td>";
-                        echo "<td>".$result[0][$x]['jumlah']."</td>";
+                        if($nomor <= 4){
+                            echo "<td>".$nomor."</td>";
+                            echo "<td>".$result[0][$x]['jenisPublikasi']."</td>";
+                            echo "<td>".$result[0][$x]['ts2']."</td>";
+                            echo "<td>".$result[0][$x]['ts1']."</td>";
+                            echo "<td>".$result[0][$x]['ts']."</td>";
+                            echo "<td>".$result[0][$x]['jumlah']."</td>";
+                        }
+                        else{
+                            echo "<td colspan='2'><strong>Jumlah</strong></td>";
+                            echo "<td>".$result[0][$x]['ts2']."</td>";
+                            echo "<td>".$result[0][$x]['ts1']."</td>";
+                            echo "<td>".$result[0][$x]['ts']."</td>";
+                            echo "<td>".$result[0][$x]['jumlah']."</td>";
+                        }
                         echo "<tr>";
                     }
                 ?>
@@ -549,12 +558,21 @@
                     for($x=0; $x<sizeof($result[0]); $x++){
                         $nomor = $x+1;
                         echo "<tr style='background-color: white'>";
-                        echo "<td>".$nomor."</td>";
-                        echo "<td>".$result[0][$x]['jenisPublikasi']."</td>";
-                        echo "<td>".$result[0][$x]['ts2']."</td>";
-                        echo "<td>".$result[0][$x]['ts1']."</td>";
-                        echo "<td>".$result[0][$x]['ts']."</td>";
-                        echo "<td>".$result[0][$x]['jumlah']."</td>";
+                        if($nomor < 4){
+                            echo "<td>".$nomor."</td>";
+                            echo "<td>".$result[0][$x]['jenisPublikasi']."</td>";
+                            echo "<td>".$result[0][$x]['ts2']."</td>";
+                            echo "<td>".$result[0][$x]['ts1']."</td>";
+                            echo "<td>".$result[0][$x]['ts']."</td>";
+                            echo "<td>".$result[0][$x]['jumlah']."</td>";
+                        }
+                        else{
+                            echo "<td colspan='2'><strong>Jumlah</strong></td>";
+                            echo "<td>".$result[0][$x]['ts2']."</td>";
+                            echo "<td>".$result[0][$x]['ts1']."</td>";
+                            echo "<td>".$result[0][$x]['ts']."</td>";
+                            echo "<td>".$result[0][$x]['jumlah']."</td>";
+                        }
                         echo "<tr>";
                     }
                 ?>
@@ -584,19 +602,25 @@
                         $length = sizeOf($result[0]);
                         $nomor = $x+1;
                         echo "<tr style='background-color: white'>";
-                        echo "<td>".$nomor."</td>";
-                        echo "<td>".$result[0][$x]['JudulLuaran']."</td>";
-                        if($result[0][$x]['tahun'] == NULL){
-                            echo "<td>-</td>";
+                        if($nomor < 8){
+                            echo "<td>".$nomor."</td>";
+                            echo "<td>".$result[0][$x]['JudulLuaran']."</td>";
+                            if($result[0][$x]['tahun'] == NULL){
+                                echo "<td>-</td>";
+                            }
+                            else{
+                                echo "<td>".$result[0][$x]['tahun']."</td>";
+                            }
+                            if($result[0][$x]['keterangan'] == ""){
+                                echo "<td>-</td>";
+                            }
+                            else{
+                                echo "<td>".$result[0][$x]['keterangan']."</td>";
+                            }
                         }
                         else{
+                            echo "<td colspan='3'><strong>Jumlah</strong></td>";
                             echo "<td>".$result[0][$x]['tahun']."</td>";
-                        }
-                        if($result[0][$x]['keterangan'] == ""){
-                            echo "<td>-</td>";
-                        }
-                        else{
-                            echo "<td>".$result[0][$x]['keterangan']."</td>";
                         }
                         echo "<tr>";
                     }
@@ -643,7 +667,7 @@
                     <td></td>
                 </tr>
                 <tr style="background-color: #ffff">
-                    <td colspan="2">Jumlah</td>
+                    <td colspan="2"><strong>Jumlah</strong></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -695,10 +719,10 @@
                     <td></td>
                 </tr>
                 <tr style="background-color: #ffff">
-                    <td colspan="2">Jumlah</td>
+                    <td colspan="2"><strong>Jumlah</strong></td>
                     <td></td>
-                    <td style="background-color: darkgrey"></td>
-                    <td style="background-color: darkgrey"></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </table>
         </div>
