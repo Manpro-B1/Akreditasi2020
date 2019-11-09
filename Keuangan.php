@@ -43,7 +43,8 @@
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
         <div class="konten" id="konten-1">
             <h1>Penggunaan Dana</h1>
-            <table>
+			<img src="img/biayaDosen.png" style='width:40%;display: block;margin-left: auto;margin-right: auto;'>
+			<table>
                 <tr>
                     <th rowspan="2">No</th>
                     <th rowspan="2">Jenis Penggunaan</th>
@@ -98,7 +99,7 @@
                     }  
                 }
             ?>
-            </table>
+            </table>            
         </div>
         <script>
             close();
