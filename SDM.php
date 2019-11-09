@@ -35,24 +35,24 @@
                 </div>  
                 <div>
                     <!--Masukan id div konten kalian sesuai dengan format dibawah-->
-                    <li><a href="#konten-1" onclick="show('konten-1')">Profil Dosen</a></li>
-                    <li><a href="#konten-2" onclick="show('konten-2')">Dosen Pembimbing Tugas Utama Akhir</a></li>
-                    <li><a href="#konten-3" onclick="show('konten-3')">Ekuivalen Waktu Mengajar Penuh (EWMP) Dosen Tetap Perguruan Tinggi</a></li>
-                    <li><a href="#konten-4" onclick="show('konten-4')">Dosen Tidak Tetap yang ditugaskan sebagai pengampu mata kuliah di Program Studi yang Diakreditasi</a></li>
-                    <li><a href="#konten-5" onclick="show('konten-5')">Dosen Industri / Praktisi</a></li>
-                    <li><a href="#konten-6" onclick="show('konten-6')">Pengakuan / Rekognisi DTPS</a></li>
-                    <li><a href="#konten-7" onclick="show('konten-7')">Penelitian DTPS</a></li>
-                    <li><a href="#konten-8" onclick="show('konten-8')">Pengabdian kepada Masyarakat (PkM) DTPS</a></li>
-                    <li><a href="#konten-9" onclick="show('konten-9')">Publikasi Ilmiah DTPS</a></li>
-                    <li><a href="#konten-10" onclick="show('konten-10')">Pagelaran / Pameran / Presentasi / Publikasi Ilmiah DTPS</a></li>
-                    <li><a href="#konten-11" onclick="show('konten-11')">Karya Ilmiah DTPS yang disitasi dalam 3 tahun terakhir</a></li>
-                    <li><a href="#konten-12" onclick="show('konten-12')">Produk / jasa DTPS yang diadopsi oleh industri / masyarakat</a></li>
-                    <li><a href="#konten-13" onclick="show('konten-13')">Luaran Penelitian / PkM Lainnya oleh DTPS</a></li>
+                    <li><a href="#profil-dosen" onclick="show('profil-dosen')">Profil Dosen</a></li>
+                    <li><a href="#dosen-ta" onclick="show('dosen-ta')">Dosen Pembimbing Tugas Utama Akhir</a></li>
+                    <li><a href="#ewmp" onclick="show('ewmp')">Ekuivalen Waktu Mengajar Penuh (EWMP) Dosen Tetap Perguruan Tinggi</a></li>
+                    <li><a href="#dosen-tidak-tetap" onclick="show('dosen-tidak-tetap')">Dosen Tidak Tetap yang ditugaskan sebagai pengampu mata kuliah di Program Studi yang Diakreditasi</a></li>
+                    <li><a href="#dosen-industri" onclick="show('dosen-industri')">Dosen Industri / Praktisi</a></li>
+                    <li><a href="#rekognisi-dtps" onclick="show('rekognisi-dtps')">Pengakuan / Rekognisi DTPS</a></li>
+                    <li><a href="#penelitian-dtps" onclick="show('penelitian-dtps')">Penelitian DTPS</a></li>
+                    <li><a href="#pkm-dtps" onclick="show('pkm-dtps')">Pengabdian kepada Masyarakat (PkM) DTPS</a></li>
+                    <li><a href="#publikasi-dtps" onclick="show('publikasi-dtps')">Publikasi Ilmiah DTPS</a></li>
+                    <li><a href="#pagelaran-dtps" onclick="show('pagelaran-dtps')">Pagelaran / Pameran / Presentasi / Publikasi Ilmiah DTPS</a></li>
+                    <li><a href="#ki-dtps" onclick="show('ki-dtps')">Karya Ilmiah DTPS yang disitasi dalam 3 tahun terakhir</a></li>
+                    <li><a href="#produk-dtps" onclick="show('produk-dtps')">Produk / jasa DTPS yang diadopsi oleh industri / masyarakat</a></li>
+                    <li><a href="#luaran-dtps" onclick="show('luaran-dtps')">Luaran Penelitian / PkM Lainnya oleh DTPS</a></li>
                 </div>
             </ul>
         </div>
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
-        <div class="konten" id="konten-1">
+        <div class="konten" id="profil-dosen">
             <table>
                 <thead>
                     <tr>
@@ -164,33 +164,32 @@
                         ));
                     ?>
 
-                    <div id="chartContainer1"></div>
-
-                    <script>
-
-                            var chart = new CanvasJS.Chart("chartContainer1", {
-	                            animationEnabled: true,
-	                            exportEnabled: true,
-	                            theme: "light1", // "light1", "light2", "dark1", "dark2"
-	                            title:{
-		                            text: "Kesesuaian Kompetensi Dosen dengan Bidang yang diajar"
-	                            },
-	                            data: [{
-		                            type: "column", //change type to bar, line, area, pie, etc
-		                            indexLabelFontColor: "#5A5757",
-		                            indexLabelPlacement: "outside",   
-		                            dataPoints: <?= $data ?>,
-	                            },]
-                            });
-
-                            chart.render();
-                        
-                    </script>
-
                 </tbody>
             </table>
+
+            <div id="chartContainer1"></div>
+
+            <script>
+                const chart1 = new CanvasJS.Chart("chartContainer1", {
+	                animationEnabled: true,
+	                exportEnabled: true,
+	                theme: "light1", // "light1", "light2", "dark1", "dark2"
+	                title:{
+		                text: "Kesesuaian Kompetensi Dosen dengan Bidang yang diajar"
+	                },
+	                data: [{
+		                type: "column", //change type to bar, line, area, pie, etc
+		                indexLabelFontColor: "#5A5757",
+		                indexLabelPlacement: "outside",   
+		                dataPoints: <?= $data ?>,
+	                },]
+                });
+
+                chart1.render();
+                        
+            </script>
         </div>
-        <div class="konten" id="konten-2">
+        <div class="konten" id="dosen-ta">
             <table>
                 <thead>
                     <tr>
@@ -321,38 +320,39 @@
                         ));
                     ?>
 
-<div id="chartContainer2"></div>
 
-<script>
-
-        var chart = new CanvasJS.Chart("chartContainer2", {
-            animationEnabled: true,
-            exportEnabled: true,
-            theme: "light1", // "light1", "light2", "dark1", "dark2"
-            title:{
-                text: "Kesesuaian Kompetensi Dosen dengan Bidang yang diajar"
-            },
-            data: [{
-                type: "column", //change type to bar, line, area, pie, etc
-                indexLabelFontColor: "#5A5757",
-                indexLabelPlacement: "outside",   
-                dataPoints: <?= $data1 ?>,
-            },
-            {
-                type: "column", //change type to bar, line, area, pie, etc
-                indexLabelFontColor: "#5A5757",
-                indexLabelPlacement: "outside",   
-                dataPoints: <?= $data2 ?>,
-            },]
-        });
-
-        chart.render();
-        </script>
     
                 </tbody>
             </table>
+
+            <div id="chartContainer2"></div>
+
+            <script>
+                const chart2 = new CanvasJS.Chart("chartContainer2", {
+                    animationEnabled: true,
+                    exportEnabled: true,
+                    theme: "light1", // "light1", "light2", "dark1", "dark2"
+                    title:{
+                        text: "Kesesuaian Kompetensi Dosen dengan Bidang yang diajar"
+                    },
+                    data: [{
+                        type: "column", //change type to bar, line, area, pie, etc
+                        indexLabelFontColor: "#5A5757",
+                        indexLabelPlacement: "outside",   
+                        dataPoints: <?= $data1 ?>,
+                    },
+                    {
+                        type: "column", //change type to bar, line, area, pie, etc
+                        indexLabelFontColor: "#5A5757",
+                        indexLabelPlacement: "outside",   
+                        dataPoints: <?= $data2 ?>,
+                    },]
+                });
+
+                chart2.render();
+            </script>
         </div>
-        <div class="konten" id="konten-3">
+        <div class="konten" id="ewmp">
             <table>
                 <thead>
                     <tr>
@@ -455,33 +455,31 @@
                             ),
                         ));
                     ?>
-                </tbody>
-
-                <div id="chartContainer3"></div>
-
-                    <script>
-
-                            var chart = new CanvasJS.Chart("chartContainer3", {
-	                            animationEnabled: true,
-	                            exportEnabled: true,
-	                            theme: "light1", // "light1", "light2", "dark1", "dark2"
-	                            title:{
-		                            text: "Ekuivalen Waktu Mengajar Penuh"
-	                            },
-	                            data: [{
-		                            type: "column", //change type to bar, line, area, pie, etc
-		                            indexLabelFontColor: "#5A5757",
-		                            indexLabelPlacement: "outside",   
-		                            dataPoints: <?= $data3 ?>,
-	                            },]
-                            });
-
-                            chart.render();
-                    </script>
-                        
+                </tbody>   
             </table>
+
+            <div id="chartContainer3"></div>
+
+            <script>
+                const chart3 = new CanvasJS.Chart("chartContainer3", {
+	                animationEnabled: true,
+	                exportEnabled: true,
+	                theme: "light1", // "light1", "light2", "dark1", "dark2"
+	                title:{
+		                text: "Ekuivalen Waktu Mengajar Penuh"
+	                },
+	                data: [{
+		                type: "column", //change type to bar, line, area, pie, etc
+		                indexLabelFontColor: "#5A5757",
+		                indexLabelPlacement: "outside",   
+		                dataPoints: <?= $data3 ?>,
+	                },]
+                });
+
+                chart3.render();
+            </script>
         </div>
-        <div class="konten" id="konten-4">
+        <div class="konten" id="dosen-tidak-tetap">
             <table>
                 <thead>
                     <tr>
@@ -588,32 +586,33 @@
                     ?>
                 </tbody>
 
-                <div id="chartContainer4"></div>
-
-                    <script>
-
-                            var chart = new CanvasJS.Chart("chartContainer4", {
-	                            animationEnabled: true,
-	                            exportEnabled: true,
-	                            theme: "light1", // "light1", "light2", "dark1", "dark2"
-	                            title:{
-		                            text: "Kesesuaian Bidang Keahlian"
-	                            },
-	                            data: [{
-		                            type: "column", //change type to bar, line, area, pie, etc
-		                            indexLabelFontColor: "#5A5757",
-		                            indexLabelPlacement: "outside",   
-		                            dataPoints: <?= $data ?>,
-	                            },]
-                            });
-
-                            chart.render();
-                        
-                    </script>
+                
             </table>
+
+            <div id="chartContainer4"></div>
+
+            <script>
+                const chart4 = new CanvasJS.Chart("chartContainer4", {
+	                animationEnabled: true,
+	                exportEnabled: true,
+	                theme: "light1", // "light1", "light2", "dark1", "dark2"
+	                title: {
+		                text: "Kesesuaian Bidang Keahlian"
+	                },
+	                data: [{
+		                type: "column", //change type to bar, line, area, pie, etc
+		                indexLabelFontColor: "#5A5757",
+		                indexLabelPlacement: "outside",   
+		                dataPoints: <?= $data ?>,
+	                },]
+                });
+
+                chart4.render(); 
+            </script>
         </div>
-        <div class="konten" id="konten-5">
-            <table>
+        <div class="konten" id="dosen-industri">
+            Sedang dalam Maintenance
+            <!--<table>
                 <thead>
                     <tr>
                         <th>
@@ -663,9 +662,9 @@
                         */
                     ?>
                 </tbody>
-            </table>
+            </table>-->
         </div>
-        <div class="konten" id="konten-6">
+        <div class="konten" id="rekognisi-dtps">
             <table>
                 <thead>
                     <tr>
@@ -760,32 +759,30 @@
                         ));
                     ?>
                 </tbody>
-
-                <div id="chartContainer6"></div>
-
-                    <script>
-
-                            var chart = new CanvasJS.Chart("chartContainer6", {
-	                            animationEnabled: true,
-	                            exportEnabled: true,
-	                            theme: "light1", // "light1", "light2", "dark1", "dark2"
-	                            title:{
-		                            text: "Pengakuan / Rekognisi DTPS"
-	                            },
-	                            data: [{
-		                            type: "column", //change type to bar, line, area, pie, etc
-		                            indexLabelFontColor: "#5A5757",
-		                            indexLabelPlacement: "outside",   
-		                            dataPoints: <?= $data ?>,
-	                            },]
-                            });
-
-                            chart.render();
-                        
-                    </script>
             </table>
+
+            <div id="chartContainer6"></div>
+
+            <script>
+                const chart6 = new CanvasJS.Chart("chartContainer6", {
+	                animationEnabled: true,
+	                exportEnabled: true,
+	                theme: "light1", // "light1", "light2", "dark1", "dark2"
+	                title: {
+		                text: "Pengakuan / Rekognisi DTPS"
+	                },
+	                data: [{
+		                type: "column", //change type to bar, line, area, pie, etc
+		                indexLabelFontColor: "#5A5757",
+		                indexLabelPlacement: "outside",   
+		                dataPoints: <?= $data ?>,
+	                },]
+                });
+
+                chart6.render();    
+            </script>
         </div>
-        <div class="konten" id="konten-7">
+        <div class="konten" id="penelitian-dtps">
             <table>
                 <thead>
                     <tr>
@@ -842,7 +839,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="konten" id="konten-8">
+        <div class="konten" id="pkm-dtps">
             <table>
                 <thead>
                     <tr>
@@ -889,7 +886,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="konten" id="konten-9">
+        <div class="konten" id="publikasi-dtps">
             <table>
                 <thead>
                     <tr>
@@ -936,7 +933,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="konten" id="konten-10">
+        <div class="konten" id="pagelaran-dtps">
             <table>
                 <thead>
                     <tr>
@@ -1032,7 +1029,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="konten" id="konten-11">
+        <div class="konten" id="ki-dtps">
             <table>
                 <thead>
                     <tr>
@@ -1077,7 +1074,9 @@
                 </tbody>
             </table>
         </div>
-        <div class="konten" id="konten-12">
+        <div class="konten" id="produk-dtps">
+            Sedang Dalam Maintenance
+            <!--
             <table>
                 <thead>
                     <tr>
@@ -1102,8 +1101,9 @@
                 
                 </tbody>
             </table>
+            -->
         </div>
-        <div class="konten" id="konten-13">
+        <div class="konten" id="luaran-dtps">
             <table>
                 <thead>
                     <tr>
