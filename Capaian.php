@@ -4,7 +4,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="capaian.css">
 </head>
-
+<style>
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+</style>
 <body>
     <div class="judul-block">
         <div class="judul-kontainer">
@@ -78,6 +87,7 @@
                     <td></td>
                 </tr>
             </table>
+            <img src="./img/tridharma-5.6/tabel1.png" class="center" alt="">
         </div>
         <div>
             <p>Tabel 8.f.1) Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa</p>
@@ -112,6 +122,7 @@
                     <td></td>
                 </tr>
             </table>
+            <img src="./img/tridharma-5.6/tabel2.png" class="center" alt="">
         </div>
         <div>
             <p>Tabel 8.f.2) Karya ilmiah mahasiswa yang disitasi</p>
@@ -157,6 +168,7 @@
 
                 </tr>
             </table>
+            <img src="./img/tridharma-5.6/tabel3.png" class="center" alt="">
         </div>
     </div>
 
