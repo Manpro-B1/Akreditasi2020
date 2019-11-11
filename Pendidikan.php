@@ -39,6 +39,7 @@
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
         <div class="konten" id="konten-1">
             <h1>Integrasi Kegiatan Penelitian/PkM dalam Pembelajaran</h1>
+            <img src="img/DosenIntegrasi.png" style ="width:40%;display:block;margin: 0 auto">
                 <table>
                  <tr>
                     <th>No.</th>
