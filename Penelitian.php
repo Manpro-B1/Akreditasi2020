@@ -44,6 +44,7 @@ include "TableController.php";
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
         <div class="konten" id="konten-1">
             <h1>Penelitian DTPS yang Melibatkan Mahasiswa</h1>
+           <img src = "img/tahunpenelitian.jpg" style='width:40%;display: block;margin-left: auto;margin-right: auto;'>
             <table>
                 <tr>
                     <th>
