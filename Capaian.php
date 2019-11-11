@@ -45,87 +45,8 @@
         dsa
     </div>
     <div class="konten" id="konten-4">
-        <div style="text-align:center; font-weight: bold; font-size: 17px">
-            <p>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada program Diploma
-                Tiga/Sarjana/Sarjana Terapan.</p>
-        </div>
-
-        <!-- Diploma 3 -->
-        <div>
-            <p>Tabel 8.1) Waktu Tunggu Lulusan</p>
-            <p><u>Diisi oleh pengusul dari Program Studi Diploma Tiga</u></p>
-            <table id="tbl-konten">
-                <tr style="background-color: darkgrey">
-                    <th rowspan="2">Tahun Lulus</th>
-                    <th rowspan="2">Jumlah Lulusan</th>
-                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>
-                    <th rowspan="2">Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
-                    <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <th>WT &lt; 3 bulan</th>
-                    <th>3 &le; WT &le; 6 bulan</th>
-                    <th>WT &gt; 6 bulan</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-                <tr style="background-color: #ffff">
-                    <td>TS-1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- Sarjana -->
-        <div>
-            <p>Tabel 8.1) Waktu Tunggu Lulusan</p>
-            <p><u>Diisi oleh pengusul dari Program Studi Sarjana</u></p>
-            <table id="tbl-konten">
-                <tr style="background-color: darkgrey">
-                    <th rowspan="2">Tahun Lulus</th>
-                    <th rowspan="2">Jumlah Lulusan</th>
-                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>
-                    <th rowspan="2">Jumlah Lulusan yang Dipesan Sebelum Lulus</th>
-                    <th colspan="3">Jumlah Lulusan dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <th>WT &lt; 3 bulan</th>
-                    <th>3 &le; WT &le; 6 bulan</th>
-                    <th>WT &gt; 6 bulan</th>
-                </tr>
-                <tr style="background-color: darkgrey">
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-                <tr style="background-color: #ffff">
-                    <td>TS-1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <div class="konten" id="konten-5">
+    </div>
+		<div class="konten" id="konten-5">
              <!-- Tempat Kinerja Lulusan -->
             <div>
                 <p>Tabel 8.e.1) Tempat Kerja Lulusan</p> -->
@@ -284,7 +205,6 @@
                     </tr>
                 </table>
             </div>
-        </div>
         <script>
             close();
             function close() {
