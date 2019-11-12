@@ -283,7 +283,6 @@ $con = new TableController($db);
 
         </div>
     </div>
-
     <div class="konten" id="konten-4">
         <div style="text-align:center; font-weight: bold; font-size: 17px">
             <p>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada program Diploma
@@ -546,10 +545,10 @@ $con = new TableController($db);
     <div class="konten" id="konten-5">
         <!-- Tempat Kinerja Lulusan -->
         <div>
-            <div style="text-align:center; font-weight: bold; font-size: 17px">
-                <h3>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada <br> program Diploma
-                    Tiga/Sarjana/Sarjana Terapan/Magister/Magister Terapan.</h3>
-            </div>
+        <div style="text-align:center; font-weight: bold; font-size: 17px">
+            <h3>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada <br> program Diploma
+                Tiga/Sarjana/Sarjana Terapan/Magister/Magister Terapan.</h3>
+          </div>
             <p>Tabel 8.e.1) Tempat Kerja Lulusan</p>
             <table id="tbl-konten">
                 <tr style="background-color: darkgrey;border: 1px solid black">
@@ -710,9 +709,9 @@ $con = new TableController($db);
     </div>
     <div class="konten" id="konten-6">
         <div>
-            <div style="text-align:center; font-weight: bold; font-size: 17px">
-                <h3>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada <br> program Sarjana/Magister/Doktor.</h3>
-            </div>
+        <div style="text-align:center; font-weight: bold; font-size: 17px">
+            <h3>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada <br> program Sarjana/Magister/Doktor.</h3>
+        </div>
             <p>Tabel 8.f.1) Publikasi Ilmiah Mahasiswa</p>
             <p><u>Diisi oleh pengusul dari Program Studi pada program Sarjana/Magister/Doktor.</u></p>
             <table id="tbl-konten">
@@ -842,14 +841,13 @@ $con = new TableController($db);
                             if($result[0][$x]['tahun'] == NULL){
                                 echo "<td>-</td>";
                             }
-                            else {
+                            else{
                                 echo "<td>".$result[0][$x]['tahun']."</td>";
                             }
-
                             if($result[0][$x]['keterangan'] == ""){
                                 echo "<td>-</td>";
                             }
-                            else {
+                            else{
                                 echo "<td>".$result[0][$x]['keterangan']."</td>";
                             }
                         }
@@ -859,14 +857,6 @@ $con = new TableController($db);
                         }
                         echo "<tr>";
                     }
-
-                    if ($result[0][$x]['keterangan'] == "") {
-                        echo "<td>-</td>";
-                    } else {
-                        echo "<td>" . $result[0][$x]['keterangan'] . "</td>";
-                    }
-                    
-                    echo "<tr>";
                 ?>
             </table>
         </div>
@@ -972,14 +962,12 @@ $con = new TableController($db);
     </div>
     <script>
         close();
-
         function close() {
             var x = document.getElementsByClassName("konten");
             for (var i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
         }
-
         function show(id) {
             close();
             document.getElementById(id).style.display = "block";
