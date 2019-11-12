@@ -11,7 +11,16 @@ $con = new TableController($db);
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="capaian.css">
 </head>
-
+<style>
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+</style>
 <body>
     <div class="judul-block">
         <div class="judul-kontainer">
@@ -758,6 +767,7 @@ $con = new TableController($db);
                     }
                 ?>
             </table>
+            <img src="./img/tridharma-5.6/tabel1.png" class="center" alt="">
         </div>
         <br />
         <br />
@@ -905,6 +915,7 @@ $con = new TableController($db);
                     <td></td>
                 </tr>
             </table>
+            <img src="./img/tridharma-5.6/tabel2.png" class="center" alt="">
         </div>
         <br />
         <br />
@@ -958,6 +969,7 @@ $con = new TableController($db);
                     <td></td>
                 </tr>
             </table>
+            <img src="./img/tridharma-5.6/tabel3.png" class="center" alt="">
         </div>
     </div>
     <script>
