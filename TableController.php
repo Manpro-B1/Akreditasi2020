@@ -222,7 +222,8 @@ class TableController
     }
 
     /**
-     * 
+     * Fungsi untuk mengambil data jumlah publikasi ilmiah mahasiswa, yang dihasilkan secara mandiri atau
+     * bersama DTPS, dalam 3 tahun terakhir (part jurnal)
      */
     function getTabel8f1_partJurnalMahasiswa()
     {
@@ -232,7 +233,8 @@ class TableController
     }
 
     /**
-     * 
+     * Fungsi untuk mengambil data jumlah publikasi ilmiah mahasiswa, yang dihasilkan secara mandiri atau
+     * bersama DTPS, dalam 3 tahun terakhir (part seminar)
      */
     function getTabel8f1_PartSeminarMahasiswa()
     {
@@ -242,7 +244,8 @@ class TableController
     }
 
     /**
-     * 
+     * Fungsi untuk mengambil data luaran penelitian dan luaran PkM yang dihasilkan mahasiswa, baik secara
+     * mandiri atau bersama DTPS, dalam 3 tahun terakhir
      */
     function getTabel8f3_LuaranPenelitianPKMLainnyaMahasiswa()
     {
@@ -251,6 +254,9 @@ class TableController
         return $result;
     }
 
+    /**
+     * 
+     */
     function getRekapIntegrasiMataKuliah()
     {
         $query = "EXEC [RekapIntegrasiMataKuliah];";
@@ -282,7 +288,41 @@ class TableController
     function getTabelPrestasiAkademik()
     {
         $query = " SELECT * FROM prestasi_mhs WHERE prestasi_mhs.Akademik = 'Akademik';";
-        $result = $this->connection->executeSelectQuery($query, []);
+        $result[] = $this->connection->executeSelectQuery($query, []);
+
+        $query = "SELECT
+                        'Jumlah' AS Jumlah,
+                        lokal.lokal AS Lokal,
+                        nasional.nasional AS Nasional,
+                        internasional.internasional as Internasional
+                    FROM
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as lokal
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Akademik' AND prestasi_mhs.Tingkat LIKE 'Lokal'
+                        ) AS lokal
+                        JOIN 
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as nasional
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Akademik' AND prestasi_mhs.Tingkat LIKE 'Nasional'
+                        ) AS nasional
+                        ON  lokal.id = nasional.id
+                        JOIN 
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as internasional
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Akademik' AND prestasi_mhs.Tingkat LIKE 'Internasional'
+                        ) AS internasional
+                        ON  lokal.id = internasional.id        
+                        ";
+        $result[] = $this->connection->executeSelectQuery($query, []);
         return $result;
     }
 
@@ -293,7 +333,41 @@ class TableController
     function getTabelPrestasiNonAkademik()
     {
         $query = " SELECT * FROM prestasi_mhs WHERE prestasi_mhs.Akademik = 'Non-akademik';";
-        $result = $this->connection->executeSelectQuery($query, []);
+        $result[] = $this->connection->executeSelectQuery($query, []);
+
+        $query = "SELECT
+                        'Jumlah' AS Jumlah,
+                        lokal.lokal AS Lokal,
+                        nasional.nasional AS Nasional,
+                        internasional.internasional as Internasional
+                    FROM
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as lokal
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Non-akademik' AND prestasi_mhs.Tingkat LIKE 'Lokal'
+                        ) AS lokal
+                        JOIN 
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as nasional
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Non-akademik' AND prestasi_mhs.Tingkat LIKE 'Nasional'
+                        ) AS nasional
+                        ON  lokal.id = nasional.id
+                        JOIN 
+                        (
+                        SELECT 
+                            '1' as id,
+                            COUNT(Kegiatan) as internasional
+                        FROM prestasi_mhs 
+                        WHERE prestasi_mhs.Akademik = 'Non-akademik' AND prestasi_mhs.Tingkat LIKE 'Internasional'
+                        ) AS internasional
+                        ON  lokal.id = internasional.id        
+                        ";
+        $result[] = $this->connection->executeSelectQuery($query, []);
         return $result;
     }
 
@@ -308,12 +382,12 @@ class TableController
     }
 
     /**
-     * 
+     * Fungsi untuk mengambil jumlah lulusan, rata-rata IPK lulusan, IPK minimal, dan IPK maksimum pada TS, TS-1, dan TS-2
      */
     function getLulusanByTS()
     {
         $queryTS = "SELECT 
-                        'TS' AS tahunLulus,
+                        'TS-2' AS tahunLulus,
                         COUNT(kelulusan.NPM) AS jumlah,
                         MIN(kelulusan.IPK) AS minIPK,
                         AVG(kelulusan.IPK) AS rataRata,
@@ -322,10 +396,11 @@ class TableController
                         (
                         SELECT * 
                         FROM Kelulusan_TD 
-                        WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate()),'-08-01'))
-                        AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-1,'-07-30'))
+                        WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate())-2,'-08-01'))
+                        AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-3,'-07-30'))
                         )AS kelulusan;
                     ";
+
         $result[] = $this->connection->executeSelectQuery($queryTS, []);
 
         $queryTS = "SELECT 
@@ -346,7 +421,7 @@ class TableController
         $result[] = $this->connection->executeSelectQuery($queryTS, []);
 
         $queryTS = "SELECT 
-                        'TS-2' AS tahunLulus,
+                        'TS' AS tahunLulus,
                         COUNT(kelulusan.NPM) AS jumlah,
                         MIN(kelulusan.IPK) AS minIPK,
                         AVG(kelulusan.IPK) AS rataRata,
@@ -355,8 +430,8 @@ class TableController
                         (
                         SELECT * 
                         FROM Kelulusan_TD 
-                        WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate())-2,'-08-01'))
-                        AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-3,'-07-30'))
+                        WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate()),'-08-01'))
+                        AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-1,'-07-30'))
                         )AS kelulusan;
                     ";
 
@@ -364,6 +439,9 @@ class TableController
         return $result;
     }
 
+    /**
+     * Fungsi untuk mengambil data lulusan pada TS, TS-1, dan TS-2
+     */
     function getFullDataLulusanByTS()
     {
         $queryTS = "SELECT * FROM Kelulusan_TD WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate()),'-08-01')) 
@@ -379,6 +457,128 @@ class TableController
                     AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-3,'-07-30'));";
 
         $result["TS-2"] = $this->connection->executeSelectQuery($queryTS2, []);
+        return $result;
+    }
+
+    /**
+     * Fungsi untuk mengambil data Masa Studi Lulusan Program Studi 
+     */
+    function getTabelMasaStudiLulusan()
+    {
+        $query = "
+        DECLARE  @arrayTahunMasuk TABLE (
+            id INT  IDENTITY(1,1) PRIMARY KEY,
+            tahunMasuk INT, 
+            ts_tahun_masuk INT, 
+            jumlah_diterima INT, 
+            TS_MIN_4 INT, 
+            TS_MIN_3 INT, 
+            TS_MIN_2 INT,
+            TS_MIN_1 INT,
+            TS INT,
+            lulus_sd_TS INT,
+            rata_rata_Studi FLOAT
+        );
+        
+        INSERT INTO 
+            @arrayTahunMasuk(tahunMasuk, ts_tahun_masuk , jumlah_diterima)
+                SELECT
+                    *
+                FROM
+                    (
+                        SELECT
+                            tahun_masuk,
+                            tahun_masuk -YEAR(getdate()) AS ts_tahun_masuk,
+                            COUNT(id) as jumlahMhsDiterima
+                        FROM
+                            (
+                                SELECT
+                                    id,tahun_lulus, 
+                                    CAST(SUBSTRING(npm,0,5) AS INT) AS tahun_masuk
+                                    FROM
+                                        data_lulus
+                                    WHERE CAST(SUBSTRING(npm,0,5) AS INT) >= YEAR(getdate())-6
+                            )AS dataTS
+                        GROUP BY dataTS.tahun_masuk
+                    ) AS countMasuk
+        
+        DECLARE @cnt INT = (SELECT MIN(tahunMasuk) FROM @arrayTahunMasuk);
+        
+        DECLARE @totalRow INT = (SELECT MAX(tahunMasuk) FROM @arrayTahunMasuk);
+        
+        WHILE @cnt <= @totalRow
+        BEGIN
+                   UPDATE @arrayTahunMasuk
+                   SET TS_MIN_4  = result.jumlah
+                   FROM
+                   (
+                       SELECT COUNT(data_lulus.id) AS jumlah
+                       FROM data_lulus
+                       WHERE data_lulus.tahun_lulus LIKE CAST((YEAR(getdate())-4) AS varchar(4))
+                        AND CAST(SUBSTRING(npm,0,5) AS INT) = @cnt
+                   ) AS result
+            
+                   WHERE tahunMasuk = @cnt;
+        
+                    UPDATE @arrayTahunMasuk
+                   SET TS_MIN_3  = (
+                       SELECT COUNT(data_lulus.id) AS jumlah
+                       FROM data_lulus
+                       WHERE data_lulus.tahun_lulus LIKE CAST((YEAR(getdate())-3) AS varchar(4))
+                        AND CAST(SUBSTRING(npm,0,5) AS INT) = @cnt
+                   ) 
+                   WHERE tahunMasuk = @cnt;
+        
+                    UPDATE @arrayTahunMasuk
+                   SET TS_MIN_2  = 
+                   (
+                       SELECT COUNT(data_lulus.id) AS jumlah
+                       FROM data_lulus
+                       WHERE data_lulus.tahun_lulus LIKE CAST((YEAR(getdate())-2) AS varchar(4))
+                        AND CAST(SUBSTRING(npm,0,5) AS INT) = @cnt
+                   ) 
+                    WHERE tahunMasuk = @cnt;
+        
+                    UPDATE @arrayTahunMasuk
+                   SET TS_MIN_1  = (
+                       SELECT COUNT(data_lulus.id) AS jumlah
+                       FROM data_lulus
+                       WHERE data_lulus.tahun_lulus LIKE CAST((YEAR(getdate())-1) AS varchar(4))
+                        AND CAST(SUBSTRING(npm,0,5) AS INT) = @cnt
+                   )
+                   WHERE tahunMasuk = @cnt;
+        
+                    UPDATE @arrayTahunMasuk
+                   SET TS  = (
+                       SELECT COUNT(data_lulus.id) AS jumlah
+                       FROM data_lulus
+                       WHERE data_lulus.tahun_lulus LIKE CAST((YEAR(getdate())) AS varchar(4))
+                        AND CAST(SUBSTRING(npm,0,5) AS INT) = @cnt
+                   )
+                   WHERE tahunMasuk = @cnt;
+        
+                   UPDATE @arrayTahunMasuk
+                   SET lulus_sd_TS = TS_MIN_4 + TS_MIN_3+TS_MIN_2+TS_MIN_1+TS;
+        
+                   UPDATE @arrayTahunMasuk
+                   SET rata_rata_Studi = CAST(((TS_MIN_4*(YEAR(getdate())-5-tahunMasuk)) + 
+                                        (TS_MIN_3*(YEAR(getdate())-4-tahunMasuk)) +
+                                        (TS_MIN_2*(YEAR(getdate())-3-tahunMasuk)) +
+                                        (TS_MIN_1*(YEAR(getdate())-2-tahunMasuk)) +
+                                        (TS*(YEAR(getdate())-1-tahunMasuk)))AS FLOAT)/CAST(lulus_sd_TS AS FLOAT);
+        
+        
+           SET @cnt = @cnt + 1;
+        END;
+        
+        SELECT
+                *
+        FROM
+            @arrayTahunMasuk
+        
+        ";
+
+        $result = $this->connection->executeStoredProcedure($query, []);
         return $result;
     }
 }
