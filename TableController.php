@@ -387,7 +387,7 @@ class TableController
     function getLulusanByTS()
     {
         $queryTS = "SELECT 
-                        'TS' AS tahunLulus,
+                        'TS-2' AS tahunLulus,
                         COUNT(kelulusan.NPM) AS jumlah,
                         MIN(kelulusan.IPK) AS minIPK,
                         AVG(kelulusan.IPK) AS rataRata,
@@ -396,10 +396,11 @@ class TableController
                         (
                         SELECT * 
                         FROM Kelulusan_TD 
-                        WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate()),'-08-01'))
-                        AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-1,'-07-30'))
+                        WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate())-2,'-08-01'))
+                        AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-3,'-07-30'))
                         )AS kelulusan;
                     ";
+
         $result[] = $this->connection->executeSelectQuery($queryTS, []);
 
         $queryTS = "SELECT 
@@ -420,7 +421,7 @@ class TableController
         $result[] = $this->connection->executeSelectQuery($queryTS, []);
 
         $queryTS = "SELECT 
-                        'TS-2' AS tahunLulus,
+                        'TS' AS tahunLulus,
                         COUNT(kelulusan.NPM) AS jumlah,
                         MIN(kelulusan.IPK) AS minIPK,
                         AVG(kelulusan.IPK) AS rataRata,
@@ -429,8 +430,8 @@ class TableController
                         (
                         SELECT * 
                         FROM Kelulusan_TD 
-                        WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate())-2,'-08-01'))
-                        AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-3,'-07-30'))
+                        WHERE Kelulusan_TD.Tgl_Yudisium < (SELECT CONCAT(YEAR(getdate()),'-08-01'))
+                        AND Kelulusan_TD.Tgl_Yudisium > (SELECT CONCAT(YEAR(getdate())-1,'-07-30'))
                         )AS kelulusan;
                     ";
 
