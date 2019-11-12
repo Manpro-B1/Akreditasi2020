@@ -1,7 +1,9 @@
+
 <head>
         <title>Pendidikan</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+      
     </head>
     <body style="height: 100%">
         <div class="judul-block">
@@ -37,6 +39,7 @@
         </div>
         <div class="konten" id="konten-2">
             dsa
+        </div>
         </div>
         <script>
             close();

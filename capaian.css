@@ -12,6 +12,9 @@ td {
     text-align: center;
     border: 1px solid black;
 }
+th{
+    font-weight: bold !important;
+}
 
 .keterangan{
     text-align: left !important;
