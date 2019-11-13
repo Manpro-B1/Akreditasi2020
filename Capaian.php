@@ -579,6 +579,9 @@ $con = new TableController($db);
                     <td style="border: 1px solid black;color: black">4</td>
                     <td style="border: 1px solid black;color: black">5</td>
                     <td style="border: 1px solid black;color: black;">6</td>
+                    <td style="border: 1px solid black;color: black;">7</td>
+                    <td style="border: 1px solid black;color: black;">8</td>
+                    <td style="border: 1px solid black;color: black;">9</td>
                 </tr>
                 <tr style="background-color: #ffff;border: 1px solid black;">
                     <td style="border: 1px solid black;color: black">TS-4</td>

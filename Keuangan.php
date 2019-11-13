@@ -44,6 +44,7 @@
         <div class="konten" id="konten-1">
             <h1>Penggunaan Dana</h1>
 			<img src="img/biayaDosen.png" style='width:40%;display: block;margin-left: auto;margin-right: auto;'>
+            <img src="img/biayaPenelitian.png" style='width:40%;display: block;margin-left: auto;margin-right: auto; margin-top:10px; margin-bottom:10px;'>
 			<table>
                 <tr>
                     <th rowspan="2">No</th>
