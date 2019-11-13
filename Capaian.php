@@ -284,7 +284,10 @@ $con = new TableController($db);
 
         </div>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> b0eb8847766ab6668e3b74fa642b53933b598870
     <div class="konten" id="konten-4">
         <div style="text-align:center; font-weight: bold; font-size: 17px">
             <p>Berikut merupakan tabel informasi yang diisi oleh pengusul dari Program Studi pada program Diploma
@@ -843,14 +846,13 @@ $con = new TableController($db);
                             if($result[0][$x]['tahun'] == NULL){
                                 echo "<td>-</td>";
                             }
-                            else {
+                            else{
                                 echo "<td>".$result[0][$x]['tahun']."</td>";
                             }
-
                             if($result[0][$x]['keterangan'] == ""){
                                 echo "<td>-</td>";
                             }
-                            else {
+                            else{
                                 echo "<td>".$result[0][$x]['keterangan']."</td>";
                             }
                         }
@@ -973,14 +975,12 @@ $con = new TableController($db);
     </div>
     <script>
         close();
-
         function close() {
             var x = document.getElementsByClassName("konten");
             for (var i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
         }
-
         function show(id) {
             close();
             document.getElementById(id).style.display = "block";
