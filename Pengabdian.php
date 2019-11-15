@@ -35,13 +35,13 @@
                 </div>  
                 <div>
                     <!--Masukan id div konten kalian sesuai dengan format dibawah-->
-                    <li><a href="#konten-1" onclick="show('konten-1')">konten 1</a></li>
-                    <li><a href="#konten-2" onclick="show('konten-2')">konten 2</a></li>
+                    <li><a href="#konten-1" onclick="show('konten-1')">PkM DTPS melibatkan Mahasiswa</a></li>
                 </div>
             </ul>
         </div>
         <!--Konten Diisi di div dibawah sini, jangan lupa tambahkan kelas "konten" dan idnya masing-masing--> 
-        <div id="tabelPKM">
+        <div class="konten" id="konten-1">
+            <div id="tabelPKM">
             <table>
             <tr>
                 <td>No</td>
@@ -79,12 +79,6 @@
             ?>
             </table>
         </div>
-        
-        <div class="konten" id="konten-1">
-            asd
-        </div>
-        <div class="konten" id="konten-2">
-            dsa
         </div>
         <script>
             close();
