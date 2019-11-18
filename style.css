@@ -174,6 +174,7 @@ pre {
 .flex-konten:hover {
     transform: scale(1.2);
     background-color: grey;
+    color: #3769b0;
 }
 
 .visimisi {
@@ -317,7 +318,7 @@ a:hover {
 
 .sidebar a:hover {
     background-color: #f1f1f1;
-    color: #56b6f1;
+    color: #3769b0;
 }
 
 .sidebar .closebtn {
@@ -352,8 +353,3 @@ a:hover {
     }
 }
 /*END OF SIDEBAR*/
-
-body{
-    margin-right: 5%;
-    margin-left: 5%;
-}

@@ -16,7 +16,7 @@
                 <a id="home" class="link-konten-slide" href="Homepage.php">HOME</a>
                     <a class="link-konten-slide" href="TataPamong.php">
                         <div class="bar-flex-side">
-                            <img class="gambar-konten-side" src="img/kerjasama.png"> <span class="labelMenu">Kerja sama</span>
+                            <img class="gambar-konten-side" src="img/kerjasama.png"> <span class="labelMenu">Tata Pamong, Tata Kelola dan Kerja Sama</span>
                         </div>
                     </a>
                     <a class="link-konten-slide" href="Mahasiswa.php">
@@ -31,12 +31,12 @@
                     </a>
                     <a class="link-konten-slide" href="Keuangan.php">
                         <div class="bar-flex-side">
-                            <img class="gambar-konten-side" src="img/keuangan.png"> <span class="labelMenu">Keuangan</span>
+                            <img class="gambar-konten-side" src="img/keuangan.png"> <span class="labelMenu">Keuangan, Sarana dan Prasarana</span>
                         </div>
                     </a>        
                     <a class="link-konten-slide" href="Pendidikan.php">
                         <div class="bar-flex-side">
-                            <img class="gambar-konten-side" src="img/akademik.png"> <span class="labelMenu">Akademik</span>
+                            <img class="gambar-konten-side" src="img/akademik.png"> <span class="labelMenu">Pendidikan</span>
                         </div>
                     </a>
                     <a class="link-konten-slide" href="Penelitian.php">
@@ -46,19 +46,19 @@
                     </a>
                     <a class="link-konten-slide" href="Pengabdian.php">
                         <div class="bar-flex-side">
-                            <img class="gambar-konten-side" src="img/pengmas.png"> <span class="labelMenu">Pengabdian Masyarakat</span>
+                            <img class="gambar-konten-side" src="img/pengmas.png"> <span class="labelMenu">Pengabdian Kepada Masyarakat</span>
                         </div>
                     </a>
                     <a class="link-konten-slide" href="Capaian.php">
                         <div class="bar-flex-side">
-                            <img class="gambar-konten-side" src="img/pencapaian.png"> <span class="labelMenu">Pencapaian</span>
+                            <img class="gambar-konten-side" src="img/pencapaian.png"> <span class="labelMenu">Luaran & Capaian Tridharma</span>
                         </div>
                     </a>
         </div>
 </div>
         <script>
                 function openNav() {
-                    document.getElementById("mySidebar").style.width = "25%";
+                    document.getElementById("mySidebar").style.width = "40%";
                     document.getElementById("main").style.marginLeft = "0px";
                 }
             
