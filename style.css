@@ -261,13 +261,19 @@ a:hover {
 }
 
 .bar-flex-side {
-    padding: 10px;
-    text-align: center;
+    font-size: 20px;
+    padding: 4px;
+    padding-left: 20px;
+    text-align: left;
     transition: transform .2s;
 }
 
 .bar-flex-side:hover {
     transform: scale(1.1);
+}
+
+.labelMenu{
+
 }
 
 #button-menu {
@@ -277,6 +283,7 @@ a:hover {
 }
 
 .gambar-konten-side {
+    width: 45px;
     height: 45px;
     padding: 5px;
     margin-left: 6px;
