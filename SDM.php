@@ -28,26 +28,26 @@
         </div>
         <div>
             <ul>
-                <div style="float: left">
+                <div>
                     <?php
                         include("Sidebar.php");
                     ?>
                 </div>  
                 <div>
                     <!--Masukan id div konten kalian sesuai dengan format dibawah-->
-                    <li><a href="#profil-dosen" onclick="show('profil-dosen')">Profil Dosen</a></li>
-                    <li><a href="#dosen-ta" onclick="show('dosen-ta')">Dosen Pembimbing Tugas Utama Akhir</a></li>
-                    <li><a href="#ewmp" onclick="show('ewmp')">Ekuivalen Waktu Mengajar Penuh (EWMP) Dosen Tetap Perguruan Tinggi</a></li>
-                    <li><a href="#dosen-tidak-tetap" onclick="show('dosen-tidak-tetap')">Dosen Tidak Tetap yang ditugaskan sebagai pengampu mata kuliah di Program Studi yang Diakreditasi</a></li>
-                    <li><a href="#dosen-industri" onclick="show('dosen-industri')">Dosen Industri / Praktisi</a></li>
-                    <li><a href="#rekognisi-dtps" onclick="show('rekognisi-dtps')">Pengakuan / Rekognisi DTPS</a></li>
-                    <li><a href="#penelitian-dtps" onclick="show('penelitian-dtps')">Penelitian DTPS</a></li>
-                    <li><a href="#pkm-dtps" onclick="show('pkm-dtps')">Pengabdian kepada Masyarakat (PkM) DTPS</a></li>
-                    <li><a href="#publikasi-dtps" onclick="show('publikasi-dtps')">Publikasi Ilmiah DTPS</a></li>
-                    <li><a href="#pagelaran-dtps" onclick="show('pagelaran-dtps')">Pagelaran / Pameran / Presentasi / Publikasi Ilmiah DTPS</a></li>
-                    <li><a href="#ki-dtps" onclick="show('ki-dtps')">Karya Ilmiah DTPS yang disitasi dalam 3 tahun terakhir</a></li>
-                    <li><a href="#produk-dtps" onclick="show('produk-dtps')">Produk / jasa DTPS yang diadopsi oleh industri / masyarakat</a></li>
-                    <li><a href="#luaran-dtps" onclick="show('luaran-dtps')">Luaran Penelitian / PkM Lainnya oleh DTPS</a></li>
+                    <li class="li-sdm"><a href="#profil-dosen" onclick="show('profil-dosen')">Profil Dosen</a></li>
+                    <li class="li-sdm"><a href="#dosen-ta" onclick="show('dosen-ta')">Dosen Pembimbing Tugas Utama Akhir</a></li>
+                    <li class="li-sdm"><a href="#ewmp" onclick="show('ewmp')">Ekuivalen Waktu Mengajar Penuh (EWMP) Dosen Tetap Perguruan Tinggi</a></li>
+                    <li class="li-sdm"><a href="#dosen-tidak-tetap" onclick="show('dosen-tidak-tetap')">Dosen Tidak Tetap yang ditugaskan sebagai pengampu mata kuliah di Program Studi yang Diakreditasi</a></li>
+                    <li class="li-sdm"><a href="#dosen-industri" onclick="show('dosen-industri')">Dosen Industri / Praktisi</a></li>
+                    <li class="li-sdm"><a href="#rekognisi-dtps" onclick="show('rekognisi-dtps')">Pengakuan / Rekognisi DTPS</a></li>
+                    <li class="li-sdm"><a href="#penelitian-dtps" onclick="show('penelitian-dtps')">Penelitian DTPS</a></li>
+                    <li class="li-sdm"><a href="#pkm-dtps" onclick="show('pkm-dtps')">Pengabdian kepada Masyarakat (PkM) DTPS</a></li>
+                    <li class="li-sdm"><a href="#publikasi-dtps" onclick="show('publikasi-dtps')">Publikasi Ilmiah DTPS</a></li>
+                    <li class="li-sdm"><a href="#pagelaran-dtps" onclick="show('pagelaran-dtps')">Pagelaran / Pameran / Presentasi / Publikasi Ilmiah DTPS</a></li>
+                    <li class="li-sdm"><a href="#ki-dtps" onclick="show('ki-dtps')">Karya Ilmiah DTPS yang disitasi dalam 3 tahun terakhir</a></li>
+                    <li class="li-sdm"><a href="#produk-dtps" onclick="show('produk-dtps')">Produk / jasa DTPS yang diadopsi oleh industri / masyarakat</a></li>
+                    <li class="li-sdm"><a href="#luaran-dtps" onclick="show('luaran-dtps')">Luaran Penelitian / PkM Lainnya oleh DTPS</a></li>
                 </div>
             </ul>
         </div>

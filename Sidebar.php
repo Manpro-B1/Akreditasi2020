@@ -8,9 +8,12 @@
                         <button class="openbtn" onclick="openNav()"><img src="img/menu.png" style="width: 60px; height: 50px;"></button>
                 </div>
                 <div id="mySidebar" class="sidebar">
+                    <div>
                         <a href="javascript:void(0)" 
                         class="closebtn" onclick="closeNav()">&times;</a>
+                    </div>
                 <div class="bar-container-side">
+                <a id="home" class="link-konten-slide" href="Homepage.php">HOME</a>
                     <a class="link-konten-slide" href="TataPamong.php">
                         <div class="bar-flex-side">
                             <img class="gambar-konten-side" src="img/kerjasama.png">
