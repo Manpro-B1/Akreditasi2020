@@ -167,7 +167,8 @@ pre {
     min-width: 110px;
     min-height: 30px;
     transition: transform .3s;
-    border: solid black 1px;
+    border: solid #b5b4b4 1px;
+    border-radius: 25px;
 }
 
 .flex-konten:hover {
@@ -248,7 +249,7 @@ a:hover {
 .link-konten-slide {
     background-color: transparent;
     text-align: center;
-    width: 90px;
+    width: 100%;
     transition: transform .3s;
     border-right: solid black 1px;
 }
@@ -260,7 +261,6 @@ a:hover {
 }
 
 .bar-flex-side {
-    width: 50px;
     padding: 10px;
     text-align: center;
     transition: transform .2s;
@@ -277,7 +277,6 @@ a:hover {
 }
 
 .gambar-konten-side {
-    width: 45px;
     height: 45px;
     padding: 5px;
     margin-left: 6px;
@@ -310,7 +309,8 @@ a:hover {
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
+    background-color: #f1f1f1;
+    color: #56b6f1;
 }
 
 .sidebar .closebtn {
@@ -345,3 +345,8 @@ a:hover {
     }
 }
 /*END OF SIDEBAR*/
+
+body{
+    margin-right: 5%;
+    margin-left: 5%;
+}
