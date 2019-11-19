@@ -114,7 +114,10 @@ $con = new TableController($db);
               echo "</table>";
           ?>
             </div>
-
+            <img src="./img/tridharma-5.6/jumlahlulusan.JPG" class="center" alt="">
+            <img src="./img/tridharma-5.6/ipkmin.JPG" class="center" alt="">
+            <img src="./img/tridharma-5.6/ratarata.JPG" class="center" alt="">
+            <img src="./img/tridharma-5.6/maksipk.JPG" class="center" alt="">
         </div>
     </div>
     <div class="konten" id="konten-2">
@@ -176,6 +179,7 @@ $con = new TableController($db);
 
             </div>
             <br>
+            <img src="./img/tridharma-5.6/jumlahprestasiakademik.JPG" class="center" alt="">
             <br>
 
             <p>Tabel 8.b.2) Prestasi Non-Akademik </p>
@@ -235,6 +239,7 @@ $con = new TableController($db);
                 echo "</table>";
                 ?>
             </div>
+            <img src="./img/tridharma-5.6/jumlahprestasinon.JPG" class="center" alt="">
 
         </div>
     </div>
@@ -289,6 +294,8 @@ $con = new TableController($db);
                 echo "</table>";
                 ?>
             </div>
+            <img src="./img/tridharma-5.6/perbandinganditerimalulus.JPG" class="center" alt="">
+            <img src="./img/tridharma-5.6/rataratastudi.JPG" class="center" alt="">
 
         </div>
     </div>
