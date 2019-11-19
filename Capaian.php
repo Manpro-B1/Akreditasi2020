@@ -151,17 +151,17 @@ $con = new TableController($db);
                     echo "<td>" . $value['Kegiatan'] . "</td>";
                     echo "<td>" . $value['Tahun'] . "</td>";
                     if (strtoupper($value['Tingkat']) == 'LOKAL') {
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                         echo "<td> &nbsp </td>";
                         echo "<td> &nbsp </td>";
                     } else  if (strtoupper($value['Tingkat']) == 'NASIONAL') {
                         echo "<td> &nbsp </td>";
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                         echo "<td> &nbsp </td>";
                     } else  if (strtoupper($value['Tingkat']) == 'INTERNASIONAL') {
                         echo "<td> &nbsp </td>";
                         echo "<td> &nbsp </td>";
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                     }
                     echo "<td>" . $value['Prestasi'] . "</td>";
                     echo "</tr>";
@@ -213,17 +213,17 @@ $con = new TableController($db);
                     echo "<td>" . $value['Kegiatan'] . "</td>";
                     echo "<td>" . $value['Tahun'] . "</td>";
                     if (strtoupper($value['Tingkat']) == 'LOKAL') {
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                         echo "<td> &nbsp </td>";
                         echo "<td> &nbsp </td>";
                     } else  if (strtoupper($value['Tingkat']) == 'NASIONAL') {
                         echo "<td> &nbsp </td>";
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                         echo "<td> &nbsp </td>";
                     } else  if (strtoupper($value['Tingkat']) == 'INTERNASIONAL') {
                         echo "<td> &nbsp </td>";
                         echo "<td> &nbsp </td>";
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                     }
                     echo "<td>" . $value['Prestasi'] . "</td>";
                     echo "</tr>";
