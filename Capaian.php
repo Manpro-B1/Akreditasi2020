@@ -37,7 +37,7 @@ $con = new TableController($db);
     </div>
     <div>
         <ul>
-            <div style="float: left">
+            <div>
                 <?php
                 include "Sidebar.php";
                 ?>
@@ -114,7 +114,10 @@ $con = new TableController($db);
               echo "</table>";
           ?>
             </div>
-
+            <img src="./img/tridharma-5.6/jumlahlulusan.JPG" class="center" alt="">
+            <img src="./img/tridharma-5.6/ipkmin.JPG" class="center" alt="">
+            <img src="./img/tridharma-5.6/ratarata.JPG" class="center" alt="">
+            <img src="./img/tridharma-5.6/maksipk.JPG" class="center" alt="">
         </div>
     </div>
     <div class="konten" id="konten-2">
@@ -148,17 +151,17 @@ $con = new TableController($db);
                     echo "<td>" . $value['Kegiatan'] . "</td>";
                     echo "<td>" . $value['Tahun'] . "</td>";
                     if (strtoupper($value['Tingkat']) == 'LOKAL') {
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                         echo "<td> &nbsp </td>";
                         echo "<td> &nbsp </td>";
                     } else  if (strtoupper($value['Tingkat']) == 'NASIONAL') {
                         echo "<td> &nbsp </td>";
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                         echo "<td> &nbsp </td>";
                     } else  if (strtoupper($value['Tingkat']) == 'INTERNASIONAL') {
                         echo "<td> &nbsp </td>";
                         echo "<td> &nbsp </td>";
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                     }
                     echo "<td>" . $value['Prestasi'] . "</td>";
                     echo "</tr>";
@@ -176,6 +179,7 @@ $con = new TableController($db);
 
             </div>
             <br>
+            <img src="./img/tridharma-5.6/jumlahprestasiakademik.JPG" class="center" alt="">
             <br>
 
             <p>Tabel 8.b.2) Prestasi Non-Akademik </p>
@@ -209,17 +213,17 @@ $con = new TableController($db);
                     echo "<td>" . $value['Kegiatan'] . "</td>";
                     echo "<td>" . $value['Tahun'] . "</td>";
                     if (strtoupper($value['Tingkat']) == 'LOKAL') {
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                         echo "<td> &nbsp </td>";
                         echo "<td> &nbsp </td>";
                     } else  if (strtoupper($value['Tingkat']) == 'NASIONAL') {
                         echo "<td> &nbsp </td>";
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                         echo "<td> &nbsp </td>";
                     } else  if (strtoupper($value['Tingkat']) == 'INTERNASIONAL') {
                         echo "<td> &nbsp </td>";
                         echo "<td> &nbsp </td>";
-                        echo "<td> <i class='fas fa-check'></i> </td>";
+                        echo "<td>V</td>";
                     }
                     echo "<td>" . $value['Prestasi'] . "</td>";
                     echo "</tr>";
@@ -235,6 +239,7 @@ $con = new TableController($db);
                 echo "</table>";
                 ?>
             </div>
+            <img src="./img/tridharma-5.6/jumlahprestasinon.JPG" class="center" alt="">
 
         </div>
     </div>
@@ -289,6 +294,8 @@ $con = new TableController($db);
                 echo "</table>";
                 ?>
             </div>
+            <img src="./img/tridharma-5.6/perbandinganditerimalulus.JPG" class="center" alt="">
+            <img src="./img/tridharma-5.6/rataratastudi.JPG" class="center" alt="">
 
         </div>
     </div>

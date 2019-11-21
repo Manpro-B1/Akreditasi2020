@@ -12,13 +12,16 @@
     <div class="visimisi">
         <div>
             <h4 class="head">Visi</h4>
-            <p class="visi">Menjadi komunitas akademik yang unggul di bidang informatika yang</p><br>
-            <p class="visi">memiliki kemampuan kreatif dan inovatif dan mengembangkan</p><br>
-            <p class="visi">potensi lokal pada tataran internasional demi</p><br>
-            <p class="visi">peningkatan martabat manusia.</p><br>
+            <pre>
+            <p class="visi">Menjadi komunitas akademik yang unggul di bidang informatika</p><br>
+            <p class="visi">yang memiliki kemampuan kreatif dan inovatif</p><br>
+            <p class="visi">dan mengembangkan potensi lokal pada tataran</p><br>
+            <p class="visi"> internasional demi peningkatan martabat manusia.</p><br>
+            </pre>
         </div>
         <div>
             <h4 class="head">Misi</h4>
+            <pre>
             <div class="misi">
                 <p>1. Proses pembelajaran di bidang informatika agar menghasilkan lulusan</p><br>
                 <p>dengan kompetensi akademik yang tinggi, memiliki kemampuan kreatif dan inovatif, </p><br>
@@ -30,10 +33,12 @@
                 <p>masyarakat nasional dan internasional dengan berupaya menggali potensi lokal.</p><br>
             </div>
             <div class="misi">
-                <p>3. Pengabdian kepada masyarakat dengan berkontribusi untuk memajukan masyarakat </p><br>
-                <p>dalam meningkatkan pengetahuan dan pemanfaatan teknologi informasi.</p><br>
+                <p>3. Pengabdian kepada masyarakat dengan berkontribusi  </p><br>
+                <p>untuk memajukan masyarakat dalam meningkatkan </p><br>
+                <p>pengetahuan dan pemanfaatan teknologi informasi.</p><br>
                 <br>
             </div>
+            </pre>
         </div>
     </div>
     <div class="flex-container">

@@ -20,7 +20,7 @@
     </div>
     <div>
         <ul>
-            <div style="float: left">
+            <div>
                 <?php
                 include("Sidebar.php");
                 ?>
